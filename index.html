@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>index</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+        <style>
+            body 
+            {
+                font-family: 'DotGothic16', sans-serif;
+            }
+            #CLI 
+            {
+                font-size: 100px;
+                position: absolute;
+                font-weight: bold;
+                top: 80%;
+                left: 50px;
+            }
+            #blink{
+                font-size: 100px;
+                color:#000000;
+                position:absolute;
+                top: 80%;
+                left: 100px;
+                font-weight: bold;
+                animation: blinker .7s ease infinite;
+            } 
+            #AllPast
+            {
+                position: absolute;
+                top:20%;
+                left:15%;
+                font-size: 40px;
+            }
+                
+            @keyframes blinker{
+                0%{
+                    opacity: 0;
+                }
+                50%{
+                    opacity: 0.7;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id = "computer">
+            <div id = "AllPast">
+                <div id = "Past1"></div>
+                <div id = "Past2"></div>
+                <div id = "Past3"></div>
+                <div id = "Past4"></div>
+                <div id = "Past5"></div>
+                <div id = "Past6"></div>
+                <div id = "Past7"></div>
+                <div id = "Past8"></div>
+            </div> 
+
+            <div id = "CLI">></div>
+            <div id = "blink">_</div>
+        </div>
+<!-- script src="" async defer -->
+        <script>
+            function test(){
+                console.log("Hey")
+            }
+
+            document.addEventListener('keydown', function(event) {
+                var theCLI = document.getElementById("CLI");
+                var thePast1 = document.getElementById("Past1");
+                var thePast2 = document.getElementById("Past2");
+                var thePast3 = document.getElementById("Past3");
+                var thePast4 = document.getElementById("Past4");
+                var thePast5 = document.getElementById("Past5");
+                var thePast6 = document.getElementById("Past6");
+                var thePast7 = document.getElementById("Past7");
+                var thePast8 = document.getElementById("Past8");
+                var Blinker = document.getElementById("blink");
+                if (event.keyCode == 9 || event.keyCode == 16 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 39 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 17 || event.keyCode == 18 || event.keyCode == 20)
+                {
+                    console.log ("pressed a key I dont like");
+                }
+                else if(event.key != "Enter") {
+                    var content = document.createTextNode(event.key);
+                    theCLI.appendChild(content);
+                    Blinker.style.left = Blinker.offsetLeft+ 55 + "px";
+                }
+                else{
+                    Blinker.style.left = 100 + "px";
+                    var content2 = document.createTextNode(theCLI.textContent);
+                    try {
+                        console.log(theCLI.textContent);
+                        if (theCLI.textContent == ">help" || theCLI.textContent == ">Help"){
+                            test();
+                        }
+                    } catch (error) {
+                        console.log(error + ": Well Shit Something went wrong")
+                    }
+
+                        thePast1.innerHTML = "";
+                        var Past2 = document.createTextNode(thePast2.textContent);
+                        thePast1.appendChild(Past2);
+
+                        thePast2.innerHTML = "";
+                        Past2 = document.createTextNode(thePast3.textContent);
+                        thePast2.appendChild(Past2);
+
+                        thePast3.innerHTML = "";
+                        Past2 = document.createTextNode(thePast4.textContent);
+                        thePast3.appendChild(Past2);
+
+                        thePast4.innerHTML = "";
+                        Past2 = document.createTextNode(thePast5.textContent);
+                        thePast4.appendChild(Past2);
+
+                        thePast5.innerHTML = "";
+                        Past2 = document.createTextNode(thePast6.textContent);
+                        thePast5.appendChild(Past2);
+
+                        thePast6.innerHTML = "";
+                        Past2 = document.createTextNode(thePast7.textContent);
+                        thePast6.appendChild(Past2);
+
+                        thePast7.innerHTML = "";
+                        Past2 = document.createTextNode(thePast8.textContent);
+                        thePast7.appendChild(Past2);
+
+                        thePast8.innerHTML = "";
+                        thePast8.appendChild(content2);
+
+                    theCLI.innerHTML = ">";
+                }
+            });
+        </script>
+    </body>
+</html>
