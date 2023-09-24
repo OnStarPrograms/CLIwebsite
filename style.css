@@ -111,3 +111,30 @@
                     opacity: 0;
                 }
             }
+            @media (pointer:coarse) or (max-width: 800px) {
+                #CLI 
+                {
+                    font-size: 100px;
+                    position: absolute;
+                    font-weight: bold;
+                    top: 40%;
+                    left: 50px;
+                }
+                #blink{
+                    font-size: 100px;
+                    position:absolute;
+                    top: 40%;
+                    left: 100px;
+                    font-weight: bold;
+                    animation: blinker .7s ease infinite;
+                } 
+                #AllPast
+                {
+                    position: absolute;
+                    top:5%;
+                    left:15%;
+                    font-size: 20px;
+                }
+            }
+
+            
