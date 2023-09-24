@@ -18,6 +18,75 @@
             body 
             {
                 font-family: 'DotGothic16', sans-serif;
+                overflow: scroll;
+                -ms-overflow-style: none; /* for Internet Explorer, Edge */
+                scrollbar-width: none; /* for Firefox */
+                overflow-y: none; 
+                color: #3ea805;
+                background-color: black;
+            }
+            body::-webkit-scrollbar {
+                display: none; /* for Chrome, Safari, and Opera */
+            }
+                        
+            @keyframes pan-overlay {
+            100% {
+                background-position: 0% 0%;
+            }
+            
+            0% {
+                background-position: 0% -100%;
+            }
+            }
+            @-moz-keyframes pan-overlay {
+            100% {
+                background-position: 0% 0%;
+            }
+            
+            0% {
+                background-position: 0% -100%;
+            }
+            }
+            @-webkit-keyframes pan-overlay {
+            100% {
+                background-position: 0% 0%;
+            }
+            
+            0% {
+                background-position: 0% -100%;
+            }
+            }
+
+            #NA
+            {
+                width:100%;
+                height:100%;
+                opacity:0%;
+                position:absolute;
+                z-index: 3;
+            }
+            #screen 
+            {
+                position:absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                /* opacity: 50%; */
+                overflow: scroll;
+                background: linear-gradient( 
+                    to bottom,
+                    rgb(20, 20, 20),
+                    rgb(20, 20, 20),
+                    rgb(20, 20, 20),
+                    rgb(50, 50, 50)
+                );
+                background-size: 200% 2%;
+                -webkit-animation: pan-overlay 12s linear infinite;
+                -moz-animation: pan-overlay 12s linear infinite;
+                animation: pan-overlay 12s infinite linear;
+                z-index: 2;
+                opacity:50%;
             }
             #CLI 
             {
@@ -29,7 +98,6 @@
             }
             #blink{
                 font-size: 100px;
-                color:#000000;
                 position:absolute;
                 top: 80%;
                 left: 100px;
@@ -61,7 +129,9 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <input type="text" id="NA" name="NA" placeholder="">
         <div id = "computer">
+            <div id = "screen"></div>
             <div id = "AllPast">
                 <div id = "Past1"></div>
                 <div id = "Past2"></div>
@@ -93,11 +163,23 @@
                 var thePast7 = document.getElementById("Past7");
                 var thePast8 = document.getElementById("Past8");
                 var Blinker = document.getElementById("blink");
-                if (event.keyCode == 9 || event.keyCode == 16 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 39 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 17 || event.keyCode == 18 || event.keyCode == 20)
+                if (event.keyCode == 9 || event.keyCode == 16 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 39 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 17 || event.keyCode == 18 || event.keyCode == 20)
                 {
                     console.log ("pressed a key I dont like");
                 }
-                else if(event.key != "Enter") {
+                else if (event.keyCode == 8)
+                {
+                    var MCon = theCLI.textContent;
+                    if (MCon != ">"){
+                        MCon = MCon.substring(0, MCon.length - 1);
+                        var content = document.createTextNode(MCon);
+                        console.log (content);
+                        theCLI.innerHTML = "";
+                        theCLI.appendChild(content);
+                        Blinker.style.left = Blinker.offsetLeft - 55 + "px";
+                    }
+                }
+                else if(event.key != "Enter" && Blinker.offsetLeft < document.body.offsetWidth) {
                     var content = document.createTextNode(event.key);
                     theCLI.appendChild(content);
                     Blinker.style.left = Blinker.offsetLeft+ 55 + "px";
