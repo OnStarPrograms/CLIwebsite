@@ -135,6 +135,11 @@
                     left:15%;
                     font-size: 20px;
                 }
+                #emptySpace{
+                    width: 15px;
+                    height: 15px;
+                    top: 800px;
+                    position: absolute;
+                }
             }
-
             
