@@ -111,7 +111,7 @@
                     opacity: 0;
                 }
             }
-            @media screen{
+            @media screen and (max-width: 1000px){
                 #CLI 
                 {
                     font-size: 50px;
