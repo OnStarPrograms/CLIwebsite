@@ -2,6 +2,7 @@ function test(){
     console.log("Hey")
 }
 
+
 document.addEventListener('keydown', function(event) {
     var theCLI = document.getElementById("CLI");
     var thePast1 = document.getElementById("Past1");
@@ -13,6 +14,9 @@ document.addEventListener('keydown', function(event) {
     var thePast7 = document.getElementById("Past7");
     var thePast8 = document.getElementById("Past8");
     var Blinker = document.getElementById("blink");
+    var style = window.getComputedStyle(Blinker, null).getPropertyValue('font-size');
+    var fontSize = parseFloat(style);
+    // now you have a proper float for the font size (yes, it can be a float, not just an integer)
     if (event.keyCode == 9 || event.keyCode == 16 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 39 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 17 || event.keyCode == 18 || event.keyCode == 20)
     {
         console.log ("pressed a key I dont like");
@@ -26,16 +30,31 @@ document.addEventListener('keydown', function(event) {
             console.log (content);
             theCLI.innerHTML = "";
             theCLI.appendChild(content);
-            Blinker.style.left = Blinker.offsetLeft - 55 + "px";
+            if (fontSize == 100){
+                Blinker.style.left = Blinker.offsetLeft - 55 + "px";
+            }
+            else{
+                Blinker.style.left = Blinker.offsetLeft - 25 + "px";
+            }
         }
     }
     else if(event.key != "Enter" && Blinker.offsetLeft < document.body.offsetWidth) {
         var content = document.createTextNode(event.key);
         theCLI.appendChild(content);
-        Blinker.style.left = Blinker.offsetLeft+ 55 + "px";
+        if (fontSize == 100){
+            Blinker.style.left = Blinker.offsetLeft+ 55 + "px";
+        }
+        else{
+            Blinker.style.left = Blinker.offsetLeft + 25 + "px";
+        }
     }
     else{
-        Blinker.style.left = 100 + "px";
+        if (fontSize == 100){
+            Blinker.style.left = 100 + "px";
+        }
+        else{
+            Blinker.style.left = 75 + "px";
+        }
         var content2 = document.createTextNode(theCLI.textContent);
         try {
             console.log(theCLI.textContent);
