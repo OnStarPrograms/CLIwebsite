@@ -118,7 +118,7 @@
                     opacity: 0;
                 }
             }
-            @media screen and (max-width: 800px){
+            @media screen and (hover: none){
                 #CLI 
                 {
                     font-size: 50px;
