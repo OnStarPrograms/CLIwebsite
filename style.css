@@ -99,6 +99,13 @@
                 left:15%;
                 font-size: 40px;
             }
+            #emptySpace{
+                width: 15px;
+                height: 15px;
+                top: 800px;
+                position: absolute;
+                color:transparent;
+            }
                 
             @keyframes blinker{
                 0%{
@@ -111,7 +118,7 @@
                     opacity: 0;
                 }
             }
-            @media screen and (max-width: 1000px){
+            @media screen and (cursor:coarse){
                 #CLI 
                 {
                     font-size: 50px;
@@ -140,6 +147,7 @@
                     height: 15px;
                     top: 800px;
                     position: absolute;
+                    color:white;
                 }
             }
             
