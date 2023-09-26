@@ -39,24 +39,25 @@
                 background-position: 0% -100%;
             }
             }
-            #Border{
-                position:absolute;
-                z-index:3;
-                left:440px;
-                top:-25px;
-                width:1100px;
-                height:1000px;
-            }
+            @media screen and (max-width:800px) and (hover:fine){
+                #Border{
+                    position:absolute;
+                    z-index:3;
+                    left:440px;
+                    top:-25px;
+                    width:1100px;
+                    height:1000px;
+                }
 
-            #computer{
-                left:615px;
-                width:550px;
-                height: 500px;
-                transform: translatey(55%);
-                overflow: hidden;
-                position:relative;
+                #computer{
+                    left:615px;
+                    width:550px;
+                    height: 500px;
+                    transform: translatey(55%);
+                    overflow: hidden;
+                    position:relative;
+                }
             }
-
             #NA
             {
                 width:100%;
@@ -135,7 +136,7 @@
                     opacity: 0;
                 }
             }
-            @media screen and (max-width:800px){
+            @media screen and (max-width:800px) and (hover:fine){
 
                 #CLI 
                 {
@@ -239,18 +240,5 @@
                     position: absolute;
                     color:white;
                 }
-                #computer{
-                    position:absolute;
-                    transform: translatey(0%);
-                    left:0%;
-                    width:100%;
-                    height:100%;
-                }
-                #Border{
-                    opacity: 0%;
-                    width:1px;
-                    height:1px;
-                }
-                
             }
             
