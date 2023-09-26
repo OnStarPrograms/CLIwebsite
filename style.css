@@ -240,8 +240,9 @@
                 #emptySpace{
                     width: 15px;
                     height: 15px;
-                    top: 70%;
+                    top: 90%;
                     position: absolute;
+                    display: inline-block;
                     color:white;
                 }
                 body{
