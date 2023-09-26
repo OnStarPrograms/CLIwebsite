@@ -216,13 +216,13 @@
                     position: absolute;
                     font-weight: bold;
                     top: 250px;
-                    left: 50px;
+                    left: 0px;
                 }
                 #blink{
                     font-size: 50px;
                     position:absolute;
                     top: 250px;
-                    left: 75px;
+                    left: 50px;
                     font-weight: bold;
                     animation: blinker .7s ease infinite;
                 } 
