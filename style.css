@@ -240,5 +240,9 @@
                     position: absolute;
                     color:white;
                 }
+                #computer{
+                    overflow-y: hidden; 
+                    overflow-x: hidden;
+                }
             }
             
