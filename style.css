@@ -209,14 +209,14 @@
                 }
             } */
 
-            @media screen and (hover:none){
+            @media screen and (width < 600px){
                 #CLI 
                 {
                     font-size: 50px;
                     position: absolute;
                     font-weight: bold;
                     top: 250px;
-                    left: -25px;
+                    left: 25px;
                 }
                 #screen{
                     opacity: 50%;
@@ -225,7 +225,7 @@
                     font-size: 50px;
                     position:absolute;
                     top: 250px;
-                    left: 0px;
+                    left: 50px;
                     font-weight: bold;
                     animation: blinker .7s ease infinite;
                 } 
@@ -233,7 +233,7 @@
                 {
                     position: absolute;
                     top:10px;
-                    left:-5%;
+                    left:5%;
                     font-size: 20px;
                 }
                 #emptySpace{
