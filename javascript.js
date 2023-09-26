@@ -1,7 +1,3 @@
-function test(){
-    console.log("Hey")
-}
-
 
 document.addEventListener('keydown', function(event) {
     var theCLI = document.getElementById("CLI");
@@ -30,7 +26,7 @@ document.addEventListener('keydown', function(event) {
             console.log (content);
             theCLI.innerHTML = "";
             theCLI.appendChild(content);
-            if (fontSize == 100){
+            if (fontSize == 60){
                 Blinker.style.left = Blinker.offsetLeft - 55 + "px";
             }
             else{
@@ -58,7 +54,7 @@ document.addEventListener('keydown', function(event) {
         var content2 = document.createTextNode(theCLI.textContent);
         try {
             console.log(theCLI.textContent);
-            if (theCLI.textContent == ">help" || theCLI.textContent == ">Help" || theCLI.textContent == ">H" || theCLI.textContent == ">h"){
+            if (theCLI.textContent.toLowerCase() == ">help" || theCLI.textContent.toLowerCase() == ">h"){
                 test();
             }
         } catch (error) {
@@ -97,5 +93,45 @@ document.addEventListener('keydown', function(event) {
             thePast8.appendChild(content2);
 
         theCLI.innerHTML = ">";
+    }
+
+
+    function test(){
+        var millisecondsToWait = 500;
+        setTimeout(function() {
+            // Whatever you want to do after the wait
+            thePast1.innerHTML = "";
+            var Past2 = document.createTextNode("Commands Available:");
+            thePast1.appendChild(Past2);
+            thePast2.innerHTML = "";
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem");
+            thePast2.appendChild(Past2);
+
+            thePast3.innerHTML = "";
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Ipsum");
+            thePast3.appendChild(Past2);
+        
+            thePast4.innerHTML = "";
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Solar");
+            thePast4.appendChild(Past2);
+    
+            thePast5.innerHTML = "";
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Sit");
+            thePast5.appendChild(Past2);
+        
+            thePast6.innerHTML = "";
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Amet");
+            thePast6.appendChild(Past2);
+        
+            thePast7.innerHTML = "";
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Dolo");
+            thePast7.appendChild(Past2);
+        
+            thePast8.innerHTML = "";
+            thePast8.appendChild(content2);
+        }, millisecondsToWait);
+        
+        console.log("Hey")
+        
     }
 });
