@@ -39,7 +39,7 @@
                 background-position: 0% -100%;
             }
             }
-            @media screen and (min-width:800px){
+            @media screen and (width>1000px){
                 #Border{
                     position:absolute;
                     z-index:3;
@@ -136,7 +136,7 @@
                     opacity: 0;
                 }
             }
-            @media screen and (max-width:800px) and (hover:fine){
+            @media screen and (width<800px){
 
                 #CLI 
                 {
