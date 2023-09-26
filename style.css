@@ -43,6 +43,7 @@
                 position:absolute;
                 z-index:3;
                 left:440px;
+                top:-25px;
                 width:1100px;
                 height:1000px;
             }
@@ -51,7 +52,7 @@
                 left:615px;
                 width:550px;
                 height: 500px;
-                transform: translatey(60%);
+                transform: translatey(55%);
                 overflow: hidden;
                 position:relative;
             }
