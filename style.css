@@ -209,7 +209,7 @@
                 }
             } */
 
-            @media screen and (width < 600px){
+            @media screen and (hover:none){
                 #CLI 
                 {
                     font-size: 50px;
