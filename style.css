@@ -136,7 +136,7 @@
                     opacity: 0;
                 }
             }
-            @media screen and (width<800px) and (hover:fine){
+            /* @media screen and (width<800px) and (hover:fine){
 
                 #CLI 
                 {
@@ -187,7 +187,7 @@
                     height: 100%;
                     left: 0;
                     top: 0;
-                    /* opacity: 50%; */
+                    /* opacity: 50%; 
                     overflow: scroll;
                     background: linear-gradient( 
                         to bottom,
@@ -203,11 +203,11 @@
                     z-index: 2;
                     opacity:50%;
                     overflow: hidden;
-                    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-                    scrollbar-width: none; /* for Firefox */
+                    -ms-overflow-style: none; /* for Internet Explorer, Edge 
+                    scrollbar-width: none; /* for Firefox 
                     overflow-y: hidden; 
                 }
-            }
+            } */
 
             @media screen and (hover:none){
                 #CLI 
