@@ -49,7 +49,7 @@ document.addEventListener('keydown', function(event) {
             Blinker.style.left = 100 + "px";
         }
         else{
-            Blinker.style.left = 20 + "px";
+            Blinker.style.left = 75 + "px";
         }
         var content2 = document.createTextNode(theCLI.textContent);
         try {
