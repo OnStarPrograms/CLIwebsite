@@ -238,11 +238,11 @@
                     font-size: 20px;
                 }
                 #emptySpace{
-                    width: 100%;
+                    width: 200px;
                     height: 15px;
                     top: 90%;
                     position: absolute;
-                    display: inline-block;
+                    display: inline;
                     color:white;
                 }
                 body{
