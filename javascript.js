@@ -26,30 +26,30 @@ document.addEventListener('keydown', function(event) {
             console.log (content);
             theCLI.innerHTML = "";
             theCLI.appendChild(content);
-            if (fontSize == 60){
-                Blinker.style.left = Blinker.offsetLeft - 55 + "px";
+            if (fontSize == 50){
+                Blinker.style.left = Blinker.offsetLeft - 25 + "px";
             }
             else{
-                Blinker.style.left = Blinker.offsetLeft - 25 + "px";
+                Blinker.style.left = Blinker.offsetLeft - 20 + "px";
             }
         }
     }
     else if(event.key != "Enter" && Blinker.offsetLeft < document.body.offsetWidth) {
         var content = document.createTextNode(event.key);
         theCLI.appendChild(content);
-        if (fontSize == 100){
-            Blinker.style.left = Blinker.offsetLeft+ 55 + "px";
+        if (fontSize == 50){
+            Blinker.style.left = Blinker.offsetLeft+ 25 + "px";
         }
         else{
-            Blinker.style.left = Blinker.offsetLeft + 25 + "px";
+            Blinker.style.left = Blinker.offsetLeft + 20 + "px";
         }
     }
     else{
-        if (fontSize == 100){
-            Blinker.style.left = 100 + "px";
+        if (fontSize == 50){
+            Blinker.style.left = 75 + "px";
         }
         else{
-            Blinker.style.left = 75 + "px";
+            Blinker.style.left = 50 + "px";
         }
         var content2 = document.createTextNode(theCLI.textContent);
         try {
