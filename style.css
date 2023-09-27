@@ -11,7 +11,9 @@
             body::-webkit-scrollbar {
                 display: none; /* for Chrome, Safari, and Opera */
             }
-                        
+            .Socials{
+                z-index: 5;
+            }      
             @keyframes pan-overlay {
             100% {
                 background-position: 0% 0%;
@@ -39,8 +41,24 @@
                 background-position: 0% -100%;
             }
             }
+            @media screen and (width<=1000px){
+                #Border2 {
+                    transform: translateX(50%);
+                }
+                #Border{
+                    transform: translateX(50%);
+                }
+            }
             @media screen and (width>1000px){
                 #Border{
+                    position:absolute;
+                    z-index:3;
+                    left:440px;
+                    top:-25px;
+                    width:1100px;
+                    height:1000px;
+                }
+                #Border2{
                     position:absolute;
                     z-index:3;
                     left:440px;
@@ -51,12 +69,19 @@
 
                 #computer{
                     left:615px;
-                    width:550px;
+                    width:570px;
                     height: 500px;
                     transform: translatey(55%);
                     overflow: hidden;
                     position:relative;
                 }
+            }
+            #Border2{
+                display: none;
+            }
+            #Border{
+                display:block; 
+                
             }
             #NA
             {

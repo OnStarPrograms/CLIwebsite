@@ -57,6 +57,38 @@ document.addEventListener('keydown', function(event) {
             if (theCLI.textContent.toLowerCase() == ">help" || theCLI.textContent.toLowerCase() == ">h"){
                 test();
             }
+            if (theCLI.textContent.toLowerCase() == ">mode" || theCLI.textContent.toLowerCase() == ">m"){
+                ChangeMode();
+            }
+            if (theCLI.textContent.toLowerCase() == ">js"){
+                evjs();
+            }
+            if (theCLI.textContent.toLowerCase() == ">w" || theCLI.textContent.toLowerCase() == ">web"){
+                openlink("https://aiden.starprograms.dev");
+            }
+            if (theCLI.textContent.toLowerCase() == ">c" || theCLI.textContent.toLowerCase() == ">certs"){
+                alert("Downloading Certifications")
+                openlink("Downloads/Certifications.zip");
+            }
+            if (theCLI.textContent.toLowerCase() == ">r" || theCLI.textContent.toLowerCase() == ">resume"){
+                openlink("Downloads/Thomas, Aiden resume 3.0.1.pdf");
+            }
+            // Downloads/Thomas, Aiden resume 3.0.1.pdf
+            if (theCLI.textContent.toLowerCase() == ">social" || theCLI.textContent.toLowerCase() == ">s"){
+                Socials();
+            }
+            if (theCLI.textContent.toLowerCase() == ">mail"){
+                openlink("mailto:on@starprograms.dev");
+            }
+            if (theCLI.textContent.toLowerCase() == ">linked-in" || theCLI.textContent.toLowerCase() == ">linked in" || theCLI.textContent.toLowerCase() == ">linkedin"){
+                openlink("https://www.linkedin.com/in/aiden-thomas-93002624a/");
+            }
+            if (theCLI.textContent.toLowerCase() == ">twitter"){
+                openlink("https://twitter.com/onstar_programs");
+            }
+            if (theCLI.textContent.toLowerCase() == ">insta" || theCLI.textContent.toLowerCase() == ">instagram"){
+                openlink("https://instagram.com/onstar_programs?igshid=OGQ5ZDc2ODk2ZA==");
+            }
         } catch (error) {
             console.log(error + ": Well Shit Something went wrong")
         }
@@ -104,27 +136,27 @@ document.addEventListener('keydown', function(event) {
             var Past2 = document.createTextNode("Commands Available:");
             thePast1.appendChild(Past2);
             thePast2.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem");
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Dark\\Lightmode: 'm' or 'mode'");
             thePast2.appendChild(Past2);
 
             thePast3.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Ipsum");
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Socials: 's' or 'social'");
             thePast3.appendChild(Past2);
         
             thePast4.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Solar");
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Resume: 'r' or 'resume'");
             thePast4.appendChild(Past2);
     
             thePast5.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Sit");
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Run Javascript from CLI Input: 'js'");
             thePast5.appendChild(Past2);
         
             thePast6.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Amet");
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Sister-Site: 'w' or 'web'");
             thePast6.appendChild(Past2);
         
             thePast7.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Dolo");
+            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Certifications: 'c' or 'certs'");
             thePast7.appendChild(Past2);
         
             thePast8.innerHTML = "";
@@ -134,4 +166,144 @@ document.addEventListener('keydown', function(event) {
         console.log("Hey")
         
     }
+
+    function ChangeMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+
+    function evjs(){
+        var millisecondsToWait = 500;
+        setTimeout(function() {
+            // Whatever you want to do after the wait
+            try {
+                thePast1.innerHTML = "";
+                var Past2 = document.createTextNode(eval(thePast2.textContent.substring(1)));
+                thePast1.appendChild(Past2);
+                if (thePast1.textContent == "undefined"){
+                    thePast1.innerHTML = "";
+                }
+            } catch (error) {
+                console.log(error+ ": uh oh")
+            }
+            
+
+
+            try {
+                thePast2.innerHTML = "";
+                Past2 = document.createTextNode(eval(thePast3.textContent.substring(1)));
+                thePast2.appendChild(Past2);
+                if (thePast2.textContent == "undefined"){
+                    thePast2.innerHTML = "";
+                }
+            } catch (error) {
+                console.log(error+ ": uh oh")
+            }
+            
+
+
+            try {
+                thePast3.innerHTML = "";
+                Past2 = document.createTextNode(eval(thePast4.textContent.substring(1)));
+                thePast3.appendChild(Past2);
+                if (thePast3.textContent == "undefined"){
+                    thePast3.innerHTML = "";
+                }
+            } catch (error) {
+                console.log(error+ ": uh oh")
+            }
+            
+
+
+            try {
+                thePast4.innerHTML = "";
+                Past2 = document.createTextNode(eval(thePast5.textContent.substring(1)));
+                thePast4.appendChild(Past2);
+                if (thePast4.textContent == "undefined"){
+                    thePast4.innerHTML = "";
+                }
+            } catch (error) {
+                console.log(error+ ": uh oh")
+            }
+            
+
+
+            try {
+                thePast5.innerHTML = "";
+                Past2 = document.createTextNode(eval(thePast6.textContent.substring(1)));
+                thePast5.appendChild(Past2);
+                if (thePast5.textContent == "undefined"){
+                    thePast5.innerHTML = "";
+                }
+            } catch (error) {
+                console.log(error+ ": uh oh")
+            }
+            
+
+
+            try {
+                thePast6.innerHTML = "";
+                Past2 = document.createTextNode(eval(thePast7.textContent.substring(1)));
+                thePast6.appendChild(Past2);
+                if (thePast6.textContent == "undefined"){
+                    thePast6.innerHTML = "";
+                }
+            } catch (error) {
+                console.log(error+ ": uh oh")
+            }
+            
+
+
+            try {
+                thePast7.innerHTML = "";
+                Past2 = document.createTextNode(eval(thePast8.textContent.substring(1)));
+                thePast7.appendChild(Past2);
+                if (thePast7.textContent == "undefined"){
+                    thePast7.innerHTML = "";
+                }
+            } catch (error) {
+                console.log(error+ ": uh oh")
+            }
+            
+
+            thePast8.innerHTML = "";
+            thePast8.appendChild(content2);
+            thePast1.innerHTML = "Code Ran Successfully";
+        }, millisecondsToWait);
+        
+        console.log("Hey")
+        
+    }
+
+    function Socials(){
+        var millisecondsToWait = 500;
+        setTimeout(function() {
+            // Whatever you want to do after the wait
+            thePast1.innerHTML = "";
+            var Past2 = document.createTextNode("Socials:");
+            thePast1.appendChild(Past2);
+            thePast2.innerHTML = '‏‏‎ ‎‏‏‎ ‎on@starprograms.dev  &#9993; : "Mail"';
+{/* <a href="https://www.linkedin.com/in/aiden-thomas-93002624a/" target="_blank" class = "Socials">Linked-in <i class="fa fa-linkedin-square"></i></a> */}
+            thePast3.innerHTML = '‏‏‎ ‎‏‏‎ ‎Linked-in <i class="fa fa-linkedin-square"></i> : "Linked-in"';
+            // <a href="https://twitter.com/onstar_programs" target="_blank" class = "Socials">Twitter  &#120143;</a> : "Twitter"
+            thePast4.innerHTML = '‏‏‎ ‎‏‏‎ ‎Twitter  &#120143; : "Twitter"';
+            // <a href="https://instagram.com/onstar_programs?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" class = "Socials">Instagram  <i class="fa fa-instagram"></i></a> : "Insta"'
+            thePast5.innerHTML = '‏‏‎ ‎‏‏‎ ‎Instagram  <i class="fa fa-instagram"></i> : "Insta"';
+
+            thePast6.innerHTML = 'Type the Social You Would like to open';
+
+            thePast7.innerHTML = '';
+
+            thePast8.innerHTML = '';
+            thePast8.appendChild(content2);
+            // window.open("https://www.youraddress.com","_blank");
+        }, millisecondsToWait);
+        
+        console.log("Hey")
+        
+    }
+    function openlink(a){
+        window.open(a,"_blank");
+    }
 });
+
