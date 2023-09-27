@@ -5,7 +5,7 @@
                 -ms-overflow-style: none; /* for Internet Explorer, Edge */
                 scrollbar-width: none; /* for Firefox */
                 /* overflow-y: hidden;  */
-                color: #3ea805;
+                color: black;
                 background-color: white;
             }
             body.dark-mode > #Border2 {
@@ -44,7 +44,9 @@
             }
             
             @media screen and (hover:none){
-                
+                body.dark-mode{
+                    color: #3ea805;
+                }
                 body.dark-mode > #emptySpace{
                     width: 200px;
                     height: 15px;
