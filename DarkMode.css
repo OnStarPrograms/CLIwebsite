@@ -5,7 +5,7 @@
                 -ms-overflow-style: none; /* for Internet Explorer, Edge */
                 scrollbar-width: none; /* for Firefox */
                 /* overflow-y: hidden;  */
-                color: black;
+                color: #3ea805;
                 background-color: white;
             }
             body.dark-mode > #Border2 {
@@ -51,7 +51,7 @@
                     top: 90%;
                     position: absolute;
                     display: inline;
-                    color:#3ea805;
+                    color:black;
                 }
             }
             
