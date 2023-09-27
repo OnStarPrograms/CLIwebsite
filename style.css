@@ -10,10 +10,7 @@
             }
             body::-webkit-scrollbar {
                 display: none; /* for Chrome, Safari, and Opera */
-            }
-            .Socials{
-                z-index: 5;
-            }      
+            }   
             @keyframes pan-overlay {
             100% {
                 background-position: 0% 0%;
@@ -147,7 +144,7 @@
                 height: 15px;
                 top: 800px;
                 position: absolute;
-                color:transparent;
+                display:none;
             }
                 
             @keyframes blinker{
