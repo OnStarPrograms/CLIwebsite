@@ -175,10 +175,24 @@ document.addEventListener('keydown', function(event) {
     function evjs(){
         var millisecondsToWait = 500;
         setTimeout(function() {
+            var totalcode = "";
             // Whatever you want to do after the wait
             try {
                 thePast1.innerHTML = "";
-                var Past2 = document.createTextNode(eval(thePast2.textContent.substring(1)));
+                if (thePast2.textContent.substring(thePast2.textContent.length-2)!=";"){
+                    var Past2 = document.createTextNode(eval(thePast2.textContent.substring(1)+";"));
+                    totalcode+=thePast2.textContent.substring(1);
+                }
+                else if(thePast2.textContent.substring(thePast2.textContent.length-2)=="{"){
+                    totalcode+=thePast2.textContent.substring(1);
+                }
+                else if(thePast2.textContent.substring(1,2)=="}"){
+                    totalcode+=thePast2.textContent.substring(1);
+                }
+                else{
+                    var Past2 = document.createTextNode(eval(thePast2.textContent.substring(1)));
+                    totalcode+=thePast2.textContent.substring(1);
+                }
                 thePast1.appendChild(Past2);
                 if (thePast1.textContent == "undefined"){
                     thePast1.innerHTML = "";
@@ -191,7 +205,20 @@ document.addEventListener('keydown', function(event) {
 
             try {
                 thePast2.innerHTML = "";
-                Past2 = document.createTextNode(eval(thePast3.textContent.substring(1)));
+                if (thePast3.textContent.substring(thePast3.textContent.length-2)!=";"){
+                    var Past2 = document.createTextNode(eval(thePast3.textContent.substring(1)+";"));
+                    totalcode+=thePast3.textContent.substring(1);
+                }
+                else if(thePast3.textContent.substring(thePast3.textContent.length-2)=="{"){
+                    totalcode+=thePast3.textContent.substring(1);
+                }
+                else if(thePast3.textContent.substring(1,2)=="}"){
+                    totalcode+=thePast3.textContent.substring(1);
+                }
+                else{
+                    var Past2 = document.createTextNode(eval(thePast3.textContent.substring(1)));
+                    totalcode+=thePast3.textContent.substring(1);
+                }
                 thePast2.appendChild(Past2);
                 if (thePast2.textContent == "undefined"){
                     thePast2.innerHTML = "";
@@ -204,7 +231,20 @@ document.addEventListener('keydown', function(event) {
 
             try {
                 thePast3.innerHTML = "";
-                Past2 = document.createTextNode(eval(thePast4.textContent.substring(1)));
+                if (thePast4.textContent.substring(thePast4.textContent.length-2)!=";"){
+                    var Past2 = document.createTextNode(eval(thePast4.textContent.substring(1)+";"));
+                    totalcode+=thePast4.textContent.substring(1);
+                }
+                else if(thePast4.textContent.substring(thePast4.textContent.length-2)=="{"){
+                    totalcode+=thePast4.textContent.substring(1);
+                }
+                else if(thePast4.textContent.substring(1,2)=="}"){
+                    totalcode+=thePast4.textContent.substring(1);
+                }
+                else{
+                    var Past2 = document.createTextNode(eval(thePast4.textContent.substring(1)));
+                    totalcode+=thePast4.textContent.substring(1);
+                }
                 thePast3.appendChild(Past2);
                 if (thePast3.textContent == "undefined"){
                     thePast3.innerHTML = "";
@@ -217,7 +257,20 @@ document.addEventListener('keydown', function(event) {
 
             try {
                 thePast4.innerHTML = "";
-                Past2 = document.createTextNode(eval(thePast5.textContent.substring(1)));
+                if (thePast5.textContent.substring(thePast5.textContent.length-2)!=";"){
+                    var Past2 = document.createTextNode(eval(thePast5.textContent.substring(1)+";"));
+                    totalcode+=thePast5.textContent.substring(1);
+                }
+                else if(thePast5.textContent.substring(thePast5.textContent.length-2)=="{"){
+                    totalcode+=thePast5.textContent.substring(1);
+                }
+                else if(thePast5.textContent.substring(1,2)=="}"){
+                    totalcode+=thePast5.textContent.substring(1);
+                }
+                else{
+                    var Past2 = document.createTextNode(eval(thePast5.textContent.substring(1)));
+                    totalcode+=thePast5.textContent.substring(1);
+                }
                 thePast4.appendChild(Past2);
                 if (thePast4.textContent == "undefined"){
                     thePast4.innerHTML = "";
@@ -230,7 +283,20 @@ document.addEventListener('keydown', function(event) {
 
             try {
                 thePast5.innerHTML = "";
-                Past2 = document.createTextNode(eval(thePast6.textContent.substring(1)));
+                if (thePast6.textContent.substring(thePast6.textContent.length-2)!=";"){
+                    var Past2 = document.createTextNode(eval(thePast6.textContent.substring(1)+";"));
+                    totalcode+=thePast6.textContent.substring(1);
+                }
+                else if(thePast6.textContent.substring(thePast6.textContent.length-2)=="{"){
+                    totalcode+=thePast6.textContent.substring(1);
+                }
+                else if(thePast6.textContent.substring(1,2)=="}"){
+                    totalcode+=thePast6.textContent.substring(1);
+                }
+                else{
+                    var Past2 = document.createTextNode(eval(thePast6.textContent.substring(1)));
+                    totalcode+=thePast6.textContent.substring(1);
+                }
                 thePast5.appendChild(Past2);
                 if (thePast5.textContent == "undefined"){
                     thePast5.innerHTML = "";
@@ -243,7 +309,20 @@ document.addEventListener('keydown', function(event) {
 
             try {
                 thePast6.innerHTML = "";
-                Past2 = document.createTextNode(eval(thePast7.textContent.substring(1)));
+                if (thePast7.textContent.substring(thePast7.textContent.length-2)!=";"){
+                    var Past2 = document.createTextNode(eval(thePast7.textContent.substring(1)+";"));
+                    totalcode+=thePast7.textContent.substring(1);
+                }
+                else if(thePast7.textContent.substring(thePast7.textContent.length-2)=="{"){
+                    totalcode+=thePast7.textContent.substring(1);
+                }
+                else if(thePast7.textContent.substring(1,2)=="}"){
+                    totalcode+=thePast7.textContent.substring(1);
+                }
+                else{
+                    var Past2 = document.createTextNode(eval(thePast7.textContent.substring(1)));
+                    totalcode+=thePast7.textContent.substring(1);
+                }
                 thePast6.appendChild(Past2);
                 if (thePast6.textContent == "undefined"){
                     thePast6.innerHTML = "";
@@ -256,8 +335,21 @@ document.addEventListener('keydown', function(event) {
 
             try {
                 thePast7.innerHTML = "";
-                Past2 = document.createTextNode(eval(thePast8.textContent.substring(1)));
-                thePast7.appendChild(Past2);
+                if (thePast8.textContent.substring(thePast8.textContent.length-2)!=";"){
+                    var Past2 = document.createTextNode(eval(thePast8.textContent.substring(1)+";"));
+                    totalcode+=thePast8.textContent.substring(1);
+                }
+                else if(thePast8.textContent.substring(thePast8.textContent.length-2)=="{"){
+                    totalcode+=thePast8.textContent.substring(1);
+                }
+                else if(thePast8.textContent.substring(1,2)=="}"){
+                    totalcode+=thePast8.textContent.substring(1);
+                }
+                else{
+                    var Past2 = document.createTextNode(eval(thePast8.textContent.substring(1)));
+                    totalcode+=thePast8.textContent.substring(1);
+                }
+                thePast1.appendChild(Past2);
                 if (thePast7.textContent == "undefined"){
                     thePast7.innerHTML = "";
                 }
@@ -265,10 +357,10 @@ document.addEventListener('keydown', function(event) {
                 console.log(error+ ": uh oh")
             }
             
-
             thePast8.innerHTML = "";
             thePast8.appendChild(content2);
             thePast1.innerHTML = "Code Ran Successfully";
+            console.log(totalcode);
         }, millisecondsToWait);
         
         console.log("Hey")
