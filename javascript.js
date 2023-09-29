@@ -12,7 +12,8 @@ document.addEventListener('keydown', function(event) {
     var Blinker = document.getElementById("blink");
     var style = window.getComputedStyle(Blinker, null).getPropertyValue('font-size');
     var fontSize = parseFloat(style);
-    // now you have a proper float for the font size (yes, it can be a float, not just an integer)
+
+    
     if (event.keyCode == 9 || event.keyCode == 16 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 39 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 17 || event.keyCode == 18 || event.keyCode == 20)
     {
         console.log ("pressed a key I dont like");
@@ -131,7 +132,6 @@ document.addEventListener('keydown', function(event) {
     function test(){
         var millisecondsToWait = 500;
         setTimeout(function() {
-            // Whatever you want to do after the wait
             thePast1.innerHTML = "";
             var Past2 = document.createTextNode("Commands Available:");
             thePast1.appendChild(Past2);
@@ -176,210 +176,38 @@ document.addEventListener('keydown', function(event) {
         var millisecondsToWait = 500;
         setTimeout(function() {
             var totalcode = "";
-            // Whatever you want to do after the wait
-            var Past2 = "";
-            try {
-                thePast1.innerHTML = "";
-                
-                if(thePast2.textContent.substring(thePast2.textContent.length-1)=="{"){
-                    totalcode+=thePast2.textContent.substring(1);
-                }
-                else if(thePast2.textContent.substring(1)=="}"){
-                    totalcode+=thePast2.textContent.substring(1);
-                }
-                else if (thePast2.textContent.substring(thePast2.textContent.length-2)!=";"){
-                    Past2 = document.createTextNode(eval(thePast2.textContent.substring(1)+";"));
-                    totalcode+=thePast2.textContent.substring(1);
-                }
-                else{
-                    Past2 = document.createTextNode(eval(thePast2.textContent.substring(1)));
-                    totalcode+=thePast2.textContent.substring(1);
-                }
-                console.log(thePast2.textContent.substring(thePast2.textContent.length-2));
-                thePast1.appendChild(Past2);
-                if (thePast1.textContent == "undefined"){
-                    thePast1.innerHTML = "";
-                }
-            } catch (error) {
-                console.log(error+ ": uh oh")
-            }
-            
+            var Past2 = document.createTextNode("");
+            var pasts = [thePast1, thePast2, thePast3, thePast4, thePast5, thePast6, thePast7, thePast8];
 
-
-            try {
-                thePast2.innerHTML = "";
-                
-                if(thePast3.textContent.substring(thePast3.textContent.length-1)=="{"){
-                    totalcode+=thePast3.textContent.substring(1);
+            for (var i = 0; i < pasts.length-1; i++){
+                try { 
+                    if(pasts[i].textContent.substring(pasts[i].textContent.length-1)=="{"){
+                        totalcode+=pasts[i].textContent.substring(1);
+                    }
+                    else if(pasts[i].textContent.substring(pasts[i].textContent.length-1)=="}"){
+                        totalcode+=pasts[i].textContent.substring(1);
+                    }
+                    else if (pasts[i].textContent.substring(pasts[i].textContent.length-1)==";"){
+                        totalcode+=pasts[i].textContent.substring(1);
+                    }
+                    console.log(pasts[i].textContent.substring(pasts[i].textContent.length-2));
+                    pasts[i].appendChild(Past2);
+                    if (pasts[i].textContent == "undefined"){
+                        pasts[i].innerHTML = "";
+                    }
+                } catch (error) {
+                    console.log(error+ ": uh oh")
                 }
-                else if(thePast3.textContent.substring(1)=="}"){
-                    totalcode+=thePast3.textContent.substring(1);
-                }
-                else if (thePast3.textContent.substring(thePast3.textContent.length-2)!=";"){
-                    Past2 = document.createTextNode(eval(thePast3.textContent.substring(1)+";"));
-                    totalcode+=thePast3.textContent.substring(1);
-                }
-                else{
-                    Past2 = document.createTextNode(eval(thePast3.textContent.substring(1)));
-                    totalcode+=thePast3.textContent.substring(1);
-                }
-                console.log(thePast3.textContent.substring(thePast3.textContent.length-2));
-                thePast2.appendChild(Past2);
-                if (thePast2.textContent == "undefined"){
-                    thePast2.innerHTML = "";
-                }
-            } catch (error) {
-                console.log(error+ ": uh oh")
-            }
-            
-
-
-            try {
-                thePast3.innerHTML = "";
-                
-                if(thePast4.textContent.substring(thePast4.textContent.length-1)=="{"){
-                    totalcode+=thePast4.textContent.substring(1);
-                }
-                else if(thePast4.textContent.substring(1)=="}"){
-                    totalcode+=thePast4.textContent.substring(1);
-                }
-                else if (thePast4.textContent.substring(thePast4.textContent.length-2)!=";"){
-                    Past2 = document.createTextNode(eval(thePast4.textContent.substring(1)+";"));
-                    totalcode+=thePast4.textContent.substring(1);
-                }
-                else{
-                    Past2 = document.createTextNode(eval(thePast4.textContent.substring(1)));
-                    totalcode+=thePast4.textContent.substring(1);
-                }
-                console.log(thePast4.textContent.substring(thePast4.textContent.length-2));
-                thePast3.appendChild(Past2);
-                if (thePast3.textContent == "undefined"){
-                    thePast3.innerHTML = "";
-                }
-            } catch (error) {
-                console.log(error+ ": uh oh")
-            }
-            
-
-
-            try {
-                thePast4.innerHTML = "";
-                
-                if(thePast5.textContent.substring(thePast5.textContent.length-1)=="{"){
-                    totalcode+=thePast5.textContent.substring(1);
-                }
-                else if(thePast5.textContent.substring(1)=="}"){
-                    totalcode+=thePast5.textContent.substring(1);
-                }
-                else if (thePast5.textContent.substring(thePast5.textContent.length-2)!=";"){
-                    Past2 = document.createTextNode(eval(thePast5.textContent.substring(1)+";"));
-                    totalcode+=thePast5.textContent.substring(1);
-                }
-                else{
-                    Past2 = document.createTextNode(eval(thePast5.textContent.substring(1)));
-                    totalcode+=thePast5.textContent.substring(1);
-                }
-                console.log(thePast5.textContent.substring(thePast5.textContent.length-2));
-                thePast4.appendChild(Past2);
-                if (thePast4.textContent == "undefined"){
-                    thePast4.innerHTML = "";
-                }
-            } catch (error) {
-                console.log(error+ ": uh oh")
-            }
-            
-
-
-            try {
-                thePast5.innerHTML = "";
-                
-                if(thePast6.textContent.substring(thePast6.textContent.length-1)=="{"){
-                    totalcode+=thePast6.textContent.substring(1);
-                }
-                else if(thePast6.textContent.substring(1)=="}"){
-                    totalcode+=thePast6.textContent.substring(1);
-                }
-                else if (thePast6.textContent.substring(thePast6.textContent.length-2)!=";"){
-                    Past2 = document.createTextNode(eval(thePast6.textContent.substring(1)+";"));
-                    totalcode+=thePast6.textContent.substring(1);
-                }
-                else{
-                    Past2 = document.createTextNode(eval(thePast6.textContent.substring(1)));
-                    totalcode+=thePast6.textContent.substring(1);
-                }
-                console.log(thePast6.textContent.substring(thePast6.textContent.length-2));
-                thePast5.appendChild(Past2);
-                if (thePast5.textContent == "undefined"){
-                    thePast5.innerHTML = "";
-                }
-            } catch (error) {
-                console.log(error+ ": uh oh")
-            }
-            
-
-
-            try {
-                thePast6.innerHTML = "";
-                
-                if(thePast7.textContent.substring(thePast7.textContent.length-1)=="{"){
-                    totalcode+=thePast7.textContent.substring(1);
-                }
-                else if(thePast7.textContent.substring(1)=="}"){
-                    totalcode+=thePast7.textContent.substring(1);
-                }
-                else if (thePast7.textContent.substring(thePast7.textContent.length-2)!=";"){
-                    Past2 = document.createTextNode(eval(thePast7.textContent.substring(1)+";"));
-                    totalcode+=thePast7.textContent.substring(1);
-                }
-                else{
-                    Past2 = document.createTextNode(eval(thePast7.textContent.substring(1)));
-                    totalcode+=thePast7.textContent.substring(1);
-                }
-                console.log(thePast7.textContent.substring(thePast7.textContent.length-2));
-                thePast6.appendChild(Past2);
-                if (thePast6.textContent == "undefined"){
-                    thePast6.innerHTML = "";
-                }
-            } catch (error) {
-                console.log(error+ ": uh oh")
-            }
-            
-
-
-            try {
-                thePast7.innerHTML = "";
-                
-                if(thePast8.textContent.substring(thePast8.textContent.length-1)=="{"){
-                    totalcode+=thePast8.textContent.substring(1);
-                }
-                else if(thePast8.textContent.substring(1)=="}"){
-                    totalcode+=thePast8.textContent.substring(1);
-                }
-                else if (thePast8.textContent.substring(thePast8.textContent.length-2)!=";"){
-                    Past2 = document.createTextNode(eval(thePast8.textContent.substring(1)+";"));
-                    totalcode+=thePast8.textContent.substring(1);
-                }
-                else{
-                    Past2 = document.createTextNode(eval(thePast8.textContent.substring(1)));
-                    totalcode+=thePast8.textContent.substring(1);
-                }
-                console.log(thePast8.textContent.substring(thePast8.textContent.length-2));
-                thePast1.appendChild(Past2);
-                if (thePast7.textContent == "undefined"){
-                    thePast7.innerHTML = "";
-                }
-            } catch (error) {
-                console.log(error+ ": uh oh")
             }
             
             thePast8.innerHTML = "";
             thePast8.appendChild(content2);
             try {
                 eval(totalcode);
-                thePast1.innerHTML = "Code Ran Successfully";
+                thePast8.innerHTML = "Code Ran Successfully";
             } catch (error) {
                 console.log(error);
-                thePast1.innerHTML = "error in your code, please try again";
+                thePast8.innerHTML = "error in your code, please try again";
             }
             console.log(totalcode);
         }, millisecondsToWait);
@@ -391,7 +219,6 @@ document.addEventListener('keydown', function(event) {
     function Socials(){
         var millisecondsToWait = 500;
         setTimeout(function() {
-            // Whatever you want to do after the wait
             thePast1.innerHTML = "";
             var Past2 = document.createTextNode("Socials:");
             thePast1.appendChild(Past2);
