@@ -1,4 +1,3 @@
-
 document.addEventListener('keydown', function(event) {
     var theCLI = document.getElementById("CLI");
     var thePast1 = document.getElementById("Past1");
@@ -166,7 +165,6 @@ document.addEventListener('keydown', function(event) {
         console.log("Hey")
         
     }
-
     function ChangeMode() {
         var element = document.body;
         element.classList.toggle("dark-mode");
