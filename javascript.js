@@ -179,7 +179,7 @@ document.addEventListener('keydown', function(event) {
                 Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Certifications: 'c' or 'certs'");
                 thePast7.appendChild(Past2);
             
-                thePast8.innerHTML = "Page 1 ('<' and '>' to change pages)";
+                thePast8.innerHTML = "Page 1"; //('<' and '>' to change pages)
             }, millisecondsToWait);
         }
         // Enact with new Commands need ideas
