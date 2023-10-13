@@ -11,11 +11,31 @@ document.addEventListener('keydown', function(event) {
     var Blinker = document.getElementById("blink");
     var style = window.getComputedStyle(Blinker, null).getPropertyValue('font-size');
     var fontSize = parseFloat(style);
-
+    var HelpStatus = 0;
+    var PageNum = 0;
+    if (thePast1.textContent == "Commands Available:"){
+        HelpStatus = 1;
+    }
     
-    if (event.keyCode == 9 || event.keyCode == 16 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 39 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 17 || event.keyCode == 18 || event.keyCode == 20)
+    if (event.keyCode == 9 || event.keyCode == 16 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 17 || event.keyCode == 18 || event.keyCode == 20)
     {
         console.log ("pressed a key I dont like");
+    }
+    else if (event.keyCode == 39 || event.key == ">")
+    {
+        console.log("Right Arrow");
+        if (HelpStatus == 1){
+            PageNum++;
+            test();
+        }
+    }
+    else if (event.keyCode == 37 || event.key == "<")
+    {
+        console.log("Left Arrow");
+        if (HelpStatus == 1){
+            PageNum--;
+            test();
+        }
     }
     else if (event.keyCode == 8)
     {
@@ -130,37 +150,73 @@ document.addEventListener('keydown', function(event) {
 
     function test(){
         var millisecondsToWait = 500;
-        setTimeout(function() {
-            thePast1.innerHTML = "";
-            var Past2 = document.createTextNode("Commands Available:");
-            thePast1.appendChild(Past2);
-            thePast2.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Dark\\Lightmode: 'm' or 'mode'");
-            thePast2.appendChild(Past2);
+        if (PageNum <= 0){
+            setTimeout(function() {
+                thePast1.innerHTML = "";
+                var Past2 = document.createTextNode("Commands Available:");
+                thePast1.appendChild(Past2);
+                thePast2.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Dark\\Lightmode: 'm' or 'mode'");
+                thePast2.appendChild(Past2);
 
-            thePast3.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Socials: 's' or 'social'");
-            thePast3.appendChild(Past2);
+                thePast3.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Socials: 's' or 'social'");
+                thePast3.appendChild(Past2);
+            
+                thePast4.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Resume: 'r' or 'resume'");
+                thePast4.appendChild(Past2);
         
-            thePast4.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Resume: 'r' or 'resume'");
-            thePast4.appendChild(Past2);
-    
-            thePast5.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Run Javascript from CLI Input: 'js'");
-            thePast5.appendChild(Past2);
+                thePast5.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Run Javascript from CLI Input: 'js'");
+                thePast5.appendChild(Past2);
+            
+                thePast6.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Sister-Site: 'w' or 'web'");
+                thePast6.appendChild(Past2);
+            
+                thePast7.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Certifications: 'c' or 'certs'");
+                thePast7.appendChild(Past2);
+            
+                thePast8.innerHTML = "Page 1 ('<' and '>' to change pages)";
+            }, millisecondsToWait);
+        }
+        // Enact with new Commands need ideas
+        //
+        //
+        // else if (PageNum == 1){
+        //     setTimeout(function() {
+        //         thePast1.innerHTML = "";
+        //         var Past2 = document.createTextNode("Commands Available:");
+        //         thePast1.appendChild(Past2);
+        //         thePast2.innerHTML = "";
+        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
+        //         thePast2.appendChild(Past2);
+
+        //         thePast3.innerHTML = "";
+        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
+        //         thePast3.appendChild(Past2);
+            
+        //         thePast4.innerHTML = "";
+        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
+        //         thePast4.appendChild(Past2);
         
-            thePast6.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Sister-Site: 'w' or 'web'");
-            thePast6.appendChild(Past2);
-        
-            thePast7.innerHTML = "";
-            Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Certifications: 'c' or 'certs'");
-            thePast7.appendChild(Past2);
-        
-            thePast8.innerHTML = "";
-            thePast8.appendChild(content2);
-        }, millisecondsToWait);
+        //         thePast5.innerHTML = "";
+        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
+        //         thePast5.appendChild(Past2);
+            
+        //         thePast6.innerHTML = "";
+        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
+        //         thePast6.appendChild(Past2);
+            
+        //         thePast7.innerHTML = "";
+        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
+        //         thePast7.appendChild(Past2);
+            
+        //         thePast8.innerHTML = "Page 2 ('<' and '>' to change pages)";
+        //     }, millisecondsToWait);
+        // }
         
         console.log("Hey")
         
