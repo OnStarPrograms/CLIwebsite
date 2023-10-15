@@ -109,6 +109,21 @@ document.addEventListener('keydown', function(event) {
             if (theCLI.textContent.toLowerCase() == ">insta" || theCLI.textContent.toLowerCase() == ">instagram"){
                 openlink("https://instagram.com/onstar_programs?igshid=OGQ5ZDc2ODk2ZA==");
             }
+            if (theCLI.textContent.toLowerCase().split(" ")[0] == ">info"){
+                info(theCLI.textContent.toLowerCase().split(" ")[1]);
+            }
+            if (theCLI.textContent.toLowerCase() == ">jar2exe" || theCLI.textContent.toLowerCase() == ">je"){
+                NotAvailable();
+            }
+            if (theCLI.textContent.toLowerCase() == ">decryption" || theCLI.textContent.toLowerCase() == ">de"){
+                NotAvailable();
+            }
+            if (theCLI.textContent.toLowerCase() == ">auto" || theCLI.textContent.toLowerCase() == ">ma"){
+                NotAvailable();
+            }
+            if (theCLI.textContent.toLowerCase() == ">alarm" || theCLI.textContent.toLowerCase() == ">sa"){
+                NotAvailable();
+            }
         } catch (error) {
             console.log(error + ": Well Shit Something went wrong")
         }
@@ -155,18 +170,22 @@ document.addEventListener('keydown', function(event) {
                 thePast1.innerHTML = "";
                 var Past2 = document.createTextNode("Commands Available:");
                 thePast1.appendChild(Past2);
+                thePast7.innerHTML = "";
+                Past2 = document.createTextNode("[For Command Info: 'info' + Command]");
+                thePast7.appendChild(Past2);
+
                 thePast2.innerHTML = "";
                 Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Dark\\Lightmode: 'm' or 'mode'");
                 thePast2.appendChild(Past2);
-
+            
                 thePast3.innerHTML = "";
                 Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Socials: 's' or 'social'");
                 thePast3.appendChild(Past2);
-            
+        
                 thePast4.innerHTML = "";
                 Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Resume: 'r' or 'resume'");
                 thePast4.appendChild(Past2);
-        
+            
                 thePast5.innerHTML = "";
                 Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Run Javascript from CLI Input: 'js'");
                 thePast5.appendChild(Past2);
@@ -175,48 +194,44 @@ document.addEventListener('keydown', function(event) {
                 Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Sister-Site: 'w' or 'web'");
                 thePast6.appendChild(Past2);
             
-                thePast7.innerHTML = "";
-                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Certifications: 'c' or 'certs'");
-                thePast7.appendChild(Past2);
-            
-                thePast8.innerHTML = "Page 1"; //('<' and '>' to change pages)
+                thePast8.innerHTML = "Page 1 ('<' and '>' to change pages)"; //
             }, millisecondsToWait);
         }
         // Enact with new Commands need ideas
         //
         //
-        // else if (PageNum == 1){
-        //     setTimeout(function() {
-        //         thePast1.innerHTML = "";
-        //         var Past2 = document.createTextNode("Commands Available:");
-        //         thePast1.appendChild(Past2);
-        //         thePast2.innerHTML = "";
-        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
-        //         thePast2.appendChild(Past2);
+        else if (PageNum == 1){
+            setTimeout(function() {
+                thePast1.innerHTML = "";
+                var Past2 = document.createTextNode("Commands Available:");
+                thePast1.appendChild(Past2);
+                thePast7.innerHTML = "";
+                Past2 = document.createTextNode("[ For Command Info: 'info' + Command]");
+                thePast7.appendChild(Past2);
 
-        //         thePast3.innerHTML = "";
-        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
-        //         thePast3.appendChild(Past2);
+                thePast2.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Certifications: 'c' or 'certs'");
+                thePast2.appendChild(Past2);
             
-        //         thePast4.innerHTML = "";
-        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
-        //         thePast4.appendChild(Past2);
+                thePast3.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎J̶a̶r̶ ̶t̶o̶ ̶E̶x̶e̶:̶ ̶'̶j̶e̶'̶ ̶o̶r̶ ̶'̶j̶a̶r̶2̶e̶x̶e̶'");//Jar to Exe: 'je' or 'jar2exe'
+                thePast3.appendChild(Past2);
         
-        //         thePast5.innerHTML = "";
-        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
-        //         thePast5.appendChild(Past2);
+                thePast4.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎D̶e̶c̶r̶y̶p̶t̶i̶o̶n̶:̶ ̶'̶d̶e̶'̶ ̶o̶r̶ ̶'̶d̶e̶c̶r̶y̶p̶t̶i̶o̶n̶'̶");//Decryption: 'de' or 'decryption'
+                thePast4.appendChild(Past2);
             
-        //         thePast6.innerHTML = "";
-        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
-        //         thePast6.appendChild(Past2);
+                thePast5.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎M̶a̶i̶l̶ ̶A̶u̶t̶o̶m̶a̶t̶i̶o̶n̶ ̶T̶o̶o̶l̶:̶ ̶'̶m̶a̶'̶ ̶o̶r̶ ̶'̶a̶u̶t̶o̶'̶");//Mail Automation Tool: 'ma' or 'auto'
+                thePast5.appendChild(Past2);
             
-        //         thePast7.innerHTML = "";
-        //         Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Lorem Ipsum'");
-        //         thePast7.appendChild(Past2);
+                thePast6.innerHTML = "";
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎S̶i̶l̶e̶n̶t̶ ̶A̶l̶a̶r̶m̶ ̶C̶l̶o̶c̶k̶:̶ ̶'̶s̶a̶'̶ ̶o̶r̶ ̶'̶a̶l̶a̶r̶m̶'̶");//Silent Alarm Clock: 'sa' or 'alarm'
+                thePast6.appendChild(Past2);
             
-        //         thePast8.innerHTML = "Page 2 ('<' and '>' to change pages)";
-        //     }, millisecondsToWait);
-        // }
+                thePast8.innerHTML = "Page 2 ('<' and '>' to change pages)";
+            }, millisecondsToWait);
+        }
         
         console.log("Hey")
         
@@ -298,6 +313,70 @@ document.addEventListener('keydown', function(event) {
     }
     function openlink(a){
         window.open(a,"_blank");
+    }
+    function info(input)
+    {
+        console.log(input + ":Input on info function");
+        if (input == "help" || input == "h"){
+
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+
+            thePast2.innerHTML = "Info: [Help]";
+
+            thePast3.innerHTML = "‏‏‎ -The [Help] command provides a set of ";
+
+            thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎general commands that give the";
+            
+            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎user proper site navigation";
+        
+            thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+            
+            
+            thePast7.innerHTML = "‏‏‎ -All commands listed in help are ";
+
+            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎available to the user";
+        }
+        else {
+            NotAvailable();
+        }
+        // if (input == ">mode" || input == ">m"){
+        //     ChangeMode();
+        // }
+        // if (input == ">js"){
+        //     evjs();
+        // }
+        // if (input == ">w" || input == ">web"){
+        //     openlink("https://aiden.starprograms.dev");
+        // }
+        // if (input == ">c" || input == ">certs"){
+        //     alert("Downloading Certifications")
+        //     openlink("Downloads/Certifications.zip");
+        // }
+        // if (input == ">r" || input == ">resume"){
+        //     openlink("Downloads/Thomas, Aiden resume 3.0.1.pdf");
+        // }
+        // // Downloads/Thomas, Aiden resume 3.0.1.pdf
+        // if (input == ">social" || input == ">s"){
+        //     Socials();
+        // }
+    }
+    function NotAvailable(){
+        thePast1.innerHTML = ".";
+
+        thePast2.innerHTML = "Command Not Available";
+
+        thePast3.innerHTML = "Check Help for Other Commands";
+
+        thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+        thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+        
+        thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+        thePast7.innerHTML = "‏‏‎ ";
+
+        thePast8.innerHTML = "‏‏‎";
     }
 });
 
