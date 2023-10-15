@@ -206,7 +206,7 @@ document.addEventListener('keydown', function(event) {
                 var Past2 = document.createTextNode("Commands Available:");
                 thePast1.appendChild(Past2);
                 thePast7.innerHTML = "";
-                Past2 = document.createTextNode("[ For Command Info: 'info' + Command]");
+                Past2 = document.createTextNode("[For Command Info: 'info' + Command]");
                 thePast7.appendChild(Past2);
 
                 thePast2.innerHTML = "";
@@ -273,7 +273,7 @@ document.addEventListener('keydown', function(event) {
             thePast8.appendChild(content2);
             try {
                 eval(totalcode);
-                thePast8.innerHTML = "Code Ran Successfully";
+                thePast8.innerHTML = "Code Attempted Successfully";
             } catch (error) {
                 console.log(error);
                 thePast8.innerHTML = "error in your code, please try again";
@@ -314,6 +314,8 @@ document.addEventListener('keydown', function(event) {
     function openlink(a){
         window.open(a,"_blank");
     }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function info(input)
     {
         console.log(input + ":Input on info function");
@@ -337,12 +339,30 @@ document.addEventListener('keydown', function(event) {
 
             thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎available to the user";
         }
+        ////////////////////////////////////////////////////////////////
+        else if (input == "mode" || input == "m")
+        {
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+
+            thePast2.innerHTML = "Info: [Mode]";
+
+            thePast3.innerHTML = "‏‏‎ -The [Mode] command changes the";
+
+            thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎websites look from ";
+            
+            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎dark mode to light mode";
+        
+            thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+            
+            
+            thePast7.innerHTML = "‏‏‎ -Command can work the other way";
+
+            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎around: from light to dark";
+        }
         else {
             NotAvailable();
         }
-        // if (input == ">mode" || input == ">m"){
-        //     ChangeMode();
-        // }
         // if (input == ">js"){
         //     evjs();
         // }
@@ -356,10 +376,10 @@ document.addEventListener('keydown', function(event) {
         // if (input == ">r" || input == ">resume"){
         //     openlink("Downloads/Thomas, Aiden resume 3.0.1.pdf");
         // }
-        // // Downloads/Thomas, Aiden resume 3.0.1.pdf
         // if (input == ">social" || input == ">s"){
         //     Socials();
         // }
+        // info on info
     }
     function NotAvailable(){
         thePast1.innerHTML = ".";
