@@ -1,3 +1,6 @@
+//NEED TO ADD CLEAR SCREEN COMMAND
+
+
 document.addEventListener('keydown', function(event) {
     var theCLI = document.getElementById("CLI");
     var thePast1 = document.getElementById("Past1");
@@ -355,17 +358,34 @@ document.addEventListener('keydown', function(event) {
             thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
             
             
-            
             thePast7.innerHTML = "‏‏‎ -Command can work the other way";
 
             thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎around: from light to dark";
         }
+        ////////////////////////////////////////////////////////////////
+        else if (input == "js")
+        {
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+
+            thePast2.innerHTML = "Info: [JavaScript]";
+
+            thePast3.innerHTML = "‏‏‎ -The [JavaScript] command allows for";
+
+            thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎the user run JavaScript Within";
+            
+            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎this website without using console";
+        
+            thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+            
+            thePast7.innerHTML = "‏‏‎ -Command works like a compiler and";
+
+            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎allows for up to 8 lines of code"; 
+        }
         else {
             NotAvailable();
         }
-        // if (input == ">js"){
-        //     evjs();
-        // }
+
         // if (input == ">w" || input == ">web"){
         //     openlink("https://aiden.starprograms.dev");
         // }
