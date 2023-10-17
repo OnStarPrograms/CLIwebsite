@@ -1,4 +1,5 @@
 //NEED TO ADD CLEAR SCREEN COMMAND
+// need to add a previewer for resume and certifications and a download command for them too
 
 
 document.addEventListener('keydown', function(event) {
@@ -382,17 +383,49 @@ document.addEventListener('keydown', function(event) {
 
             thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎allows for up to 8 lines of code"; 
         }
+        ///////////////////////////////////////////////////////////////
+        else if (input == "w" || input == "web")
+        {
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+
+            thePast2.innerHTML = "Info: [Sister Site]";
+
+            thePast3.innerHTML = "‏‏‎ -The [Sister Site] command Sends";
+
+            thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎the user to the sister site";
+            
+            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎associated to the Dev (A.D.T)";
+        
+            thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+            
+            thePast7.innerHTML = "‏‏‎ -This command opens the sister";
+
+            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎site in a new page"; 
+        }
+        else if (input == "c" || input == "certs")
+        {
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+
+            thePast2.innerHTML = "Info: [Certifications]";
+
+            thePast3.innerHTML = "‏‏‎ -The [Certifications] command downloads";
+
+            thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎a zip file of the ";
+            
+            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎Devs (A.D.T) certifications";
+        
+            thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+            
+            thePast7.innerHTML = "‏‏‎ -This command also alerts you";
+
+            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎of the download"; 
+        }
         else {
             NotAvailable();
         }
 
-        // if (input == ">w" || input == ">web"){
-        //     openlink("https://aiden.starprograms.dev");
-        // }
-        // if (input == ">c" || input == ">certs"){
-        //     alert("Downloading Certifications")
-        //     openlink("Downloads/Certifications.zip");
-        // }
         // if (input == ">r" || input == ">resume"){
         //     openlink("Downloads/Thomas, Aiden resume 3.0.1.pdf");
         // }
