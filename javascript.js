@@ -1,5 +1,5 @@
 //NEED TO ADD CLEAR SCREEN COMMAND
-// need to add a previewer for resume and certifications and a download command for them too
+// need to add a previewer for resume and certifications and a download command for them too using "preview" command
 
 
 document.addEventListener('keydown', function(event) {
