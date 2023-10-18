@@ -98,7 +98,7 @@ document.addEventListener('keydown', function(event) {
                 openlink("Downloads/Thomas, Aiden resume 3.0.1.pdf");
             }
             // Downloads/Thomas, Aiden resume 3.0.1.pdf
-            if (theCLI.textContent.toLowerCase() == ">social" || theCLI.textContent.toLowerCase() == ">s"){
+            if (theCLI.textContent.toLowerCase() == ">connect" || theCLI.textContent.toLowerCase() == ">s"){
                 Socials();
             }
             if (theCLI.textContent.toLowerCase() == ">mail"){
@@ -183,7 +183,7 @@ document.addEventListener('keydown', function(event) {
                 thePast2.appendChild(Past2);
             
                 thePast3.innerHTML = "";
-                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Socials: 's' or 'social'");
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Connect w/ Dev: 's' or 'connect'");
                 thePast3.appendChild(Past2);
         
                 thePast4.innerHTML = "";
@@ -293,7 +293,7 @@ document.addEventListener('keydown', function(event) {
         var millisecondsToWait = 500;
         setTimeout(function() {
             thePast1.innerHTML = "";
-            var Past2 = document.createTextNode("Socials:");
+            var Past2 = document.createTextNode("Connect w/ Dev:");
             thePast1.appendChild(Past2);
             thePast2.innerHTML = '‏‏‎ ‎‏‏‎ ‎on@starprograms.dev  &#9993; : "Mail"';
 {/* <a href="https://www.linkedin.com/in/aiden-thomas-93002624a/" target="_blank" class = "Socials">Linked-in <i class="fa fa-linkedin-square"></i></a> */}
@@ -303,7 +303,7 @@ document.addEventListener('keydown', function(event) {
             // <a href="https://instagram.com/onstar_programs?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" class = "Socials">Instagram  <i class="fa fa-instagram"></i></a> : "Insta"'
             thePast5.innerHTML = '‏‏‎ ‎‏‏‎ ‎Instagram  <i class="fa fa-instagram"></i> : "Insta"';
 
-            thePast6.innerHTML = 'Type the Social You Would like to open';
+            thePast6.innerHTML = 'Type the connection You Would like to open';
 
             thePast7.innerHTML = '';
 
@@ -413,25 +413,76 @@ document.addEventListener('keydown', function(event) {
 
             thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎a zip file of the ";
             
-            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎Devs (A.D.T) certifications";
+            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎Devs' (A.D.T) certifications";
         
             thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
             
             
-            thePast7.innerHTML = "‏‏‎ -This command also alerts you";
+            thePast7.innerHTML = "‏‏‎ -The certs can be previewed with";
 
-            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎of the download"; 
+            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎the 'preview c' command"; 
+        }
+        else if (input == "r" || input == "resume")
+        {
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+
+            thePast2.innerHTML = "Info: [Resume]";
+
+            thePast3.innerHTML = "‏‏‎ -The [Resume] command opens ";
+
+            thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎the Devs' (A.D.T) resume in";
+            
+            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎another tab usng .PDF format";
+        
+            thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+            
+            thePast7.innerHTML = "‏‏‎ -The Resume can be previewed with";
+
+            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎the 'preview r' command"; 
+        }
+        else if (input == "connect" || input == "s")
+        {
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+
+            thePast2.innerHTML = "Info: [connect]";
+
+            thePast3.innerHTML = "‏‏‎ -The [connect] command opens ";
+
+            thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎a sub menu that provides";
+            
+            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎additional commands to run";
+        
+            thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+            
+            thePast7.innerHTML = "‏‏‎ -These commands connect to ";
+
+            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎the Developers' socials"; 
+        }
+        else if (input == "" || input == "input" || input == undefined)
+        {
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+
+            thePast2.innerHTML = "Info: [info]";
+
+            thePast3.innerHTML = "‏‏‎ -The [info] command opens ";
+
+            thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎additional information pertaining";
+            
+            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎to said commands on this website";
+        
+            thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+            
+            thePast7.innerHTML = "‏‏‎ -These commands in question are";
+
+            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎available in the [help] menu"; 
         }
         else {
+            console.log(input)
             NotAvailable();
         }
-
-        // if (input == ">r" || input == ">resume"){
-        //     openlink("Downloads/Thomas, Aiden resume 3.0.1.pdf");
-        // }
-        // if (input == ">social" || input == ">s"){
-        //     Socials();
-        // }
         // info on info
     }
     function NotAvailable(){
