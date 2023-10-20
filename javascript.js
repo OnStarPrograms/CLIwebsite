@@ -17,7 +17,7 @@ document.addEventListener('keydown', function(event) {
     var fontSize = parseFloat(style);
     var HelpStatus = 0;
     var PageNum = 0;
-    if (thePast1.textContent == "Commands Available:"){
+    if (thePast1.textContent == "Page "+string(PageNun+1)+" ('<' and '>' to change pages)"){
         HelpStatus = 1;
     }
     
