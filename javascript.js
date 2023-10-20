@@ -16,8 +16,8 @@ document.addEventListener('keydown', function(event) {
     var style = window.getComputedStyle(Blinker, null).getPropertyValue('font-size');
     var fontSize = parseFloat(style);
     var HelpStatus = 0;
-    var PageNum = 0;
-    if (thePast1.textContent == "Page "+string(PageNun+1)+" ('<' and '>' to change pages)"){
+    var PageNum = 1;
+    if (thePast1.textContent == "Page "+PageNum.toString()+" ('<' and '>' to change pages)"){
         HelpStatus = 1;
     }
     
@@ -169,7 +169,7 @@ document.addEventListener('keydown', function(event) {
 
     function test(){
         var millisecondsToWait = 500;
-        if (PageNum <= 0){
+        if (PageNum <= 1){
             setTimeout(function() {
                 thePast1.innerHTML = "";
                 var Past2 = document.createTextNode("Commands Available:");
@@ -204,7 +204,7 @@ document.addEventListener('keydown', function(event) {
         // Enact with new Commands need ideas
         //
         //
-        else if (PageNum == 1){
+        else if (PageNum == 2){
             setTimeout(function() {
                 thePast1.innerHTML = "";
                 var Past2 = document.createTextNode("Commands Available:");
