@@ -45,7 +45,7 @@
             
             @media screen and (hover:none){
                 body.dark-mode{
-                    color: #3ea805;
+                    color: black;
                 }
                 body.dark-mode > #emptySpace{
                     width: 200px;
