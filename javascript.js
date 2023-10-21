@@ -1,6 +1,6 @@
 //NEED TO ADD CLEAR SCREEN COMMAND
 // need to add a previewer for resume and certifications and a download command for them too using "preview" command
-
+var PageNum = 1;
 
 document.addEventListener('keydown', function(event) {
     var theCLI = document.getElementById("CLI");
@@ -16,9 +16,13 @@ document.addEventListener('keydown', function(event) {
     var style = window.getComputedStyle(Blinker, null).getPropertyValue('font-size');
     var fontSize = parseFloat(style);
     var HelpStatus = 0;
-    var PageNum = 1;
-    if (thePast1.textContent == "Page "+PageNum.toString()+" ('<' and '>' to change pages)"){
-        HelpStatus = 1;
+
+    var page = [thePast1, thePast2, thePast3, thePast4, thePast5, thePast6, thePast7, thePast8];
+    for (var i = 0; i < page.length; i++)
+    {
+        if (page[i].textContent == "Page "+PageNum.toString()+" ('<' and '>' to change pages)"){
+            HelpStatus = 1;
+        }
     }
     
     if (event.keyCode == 9 || event.keyCode == 16 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 17 || event.keyCode == 18 || event.keyCode == 20)
@@ -29,7 +33,10 @@ document.addEventListener('keydown', function(event) {
     {
         console.log("Right Arrow");
         if (HelpStatus == 1){
-            PageNum++;
+            if (PageNum < 2)
+            {
+                PageNum++;
+            }
             test();
         }
     }
@@ -37,7 +44,10 @@ document.addEventListener('keydown', function(event) {
     {
         console.log("Left Arrow");
         if (HelpStatus == 1){
-            PageNum--;
+            if (PageNum > 1)
+            {
+                PageNum--;
+            }
             test();
         }
     }
@@ -170,7 +180,6 @@ document.addEventListener('keydown', function(event) {
     function test(){
         var millisecondsToWait = 500;
         if (PageNum <= 1){
-            setTimeout(function() {
                 thePast1.innerHTML = "";
                 var Past2 = document.createTextNode("Commands Available:");
                 thePast1.appendChild(Past2);
@@ -199,13 +208,11 @@ document.addEventListener('keydown', function(event) {
                 thePast6.appendChild(Past2);
             
                 thePast8.innerHTML = "Page 1 ('<' and '>' to change pages)"; //
-            }, millisecondsToWait);
         }
         // Enact with new Commands need ideas
         //
         //
         else if (PageNum == 2){
-            setTimeout(function() {
                 thePast1.innerHTML = "";
                 var Past2 = document.createTextNode("Commands Available:");
                 thePast1.appendChild(Past2);
@@ -234,7 +241,6 @@ document.addEventListener('keydown', function(event) {
                 thePast6.appendChild(Past2);
             
                 thePast8.innerHTML = "Page 2 ('<' and '>' to change pages)";
-            }, millisecondsToWait);
         }
         
         console.log("Hey")
