@@ -208,7 +208,7 @@
                     font-size: 40px;
                     position: absolute;
                     font-weight: bold;
-                    top: 250px;
+                    top: 150px;
                     left: 5px;
                 }
                 #screen{
@@ -218,7 +218,7 @@
                 #blink{
                     font-size: 40px;
                     position:absolute;
-                    top: 250px;
+                    top: 150px;
                     left: 27px;
                     font-weight: bold;
                     animation: blinker .7s ease infinite;
@@ -259,10 +259,10 @@
                     height:500px;
                 }
                 #computer{
-                    left:25px;
+                    left:55px;
                     width:570px;
                     height: 300px;
-                    transform: translatey(0%);
+                    transform: translatey(8%);
                     overflow: hidden;
                     position:relative;
                 }
