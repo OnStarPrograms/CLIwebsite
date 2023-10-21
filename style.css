@@ -209,7 +209,7 @@
                     position: absolute;
                     font-weight: bold;
                     top: 130px;
-                    left: 5px;
+                    left: 15px;
                 }
                 #screen{
                     opacity: 30%;
@@ -227,7 +227,7 @@
                 {
                     position: absolute;
                     top:9px;
-                    left:5px;
+                    left:15px;
                     font-size: 12px;
                 }
                 #emptySpace{
@@ -259,10 +259,10 @@
                     height:500px;
                 }
                 #computer{
-                    left:75px;
+                    left:65px;
                     width:570px;
                     height: 300px;
-                    transform: translatey(18%);
+                    transform: translatey(16%);
                     overflow: hidden;
                     position:relative;
                 }
