@@ -87,6 +87,37 @@ document.addEventListener('keydown', function(event) {
         }
         var content2 = document.createTextNode(theCLI.textContent);
         try {
+            thePast1.innerHTML = "";
+            var Past2 = document.createTextNode(thePast2.textContent);
+            thePast1.appendChild(Past2);
+
+            thePast2.innerHTML = "";
+            Past2 = document.createTextNode(thePast3.textContent);
+            thePast2.appendChild(Past2);
+
+            thePast3.innerHTML = "";
+            Past2 = document.createTextNode(thePast4.textContent);
+            thePast3.appendChild(Past2);
+
+            thePast4.innerHTML = "";
+            Past2 = document.createTextNode(thePast5.textContent);
+            thePast4.appendChild(Past2);
+
+            thePast5.innerHTML = "";
+            Past2 = document.createTextNode(thePast6.textContent);
+            thePast5.appendChild(Past2);
+
+            thePast6.innerHTML = "";
+            Past2 = document.createTextNode(thePast7.textContent);
+            thePast6.appendChild(Past2);
+
+            thePast7.innerHTML = "";
+            Past2 = document.createTextNode(thePast8.textContent);
+            thePast7.appendChild(Past2);
+
+            thePast8.innerHTML = "";
+            thePast8.appendChild(content2);
+
             console.log(theCLI.textContent);
             if (theCLI.textContent.toLowerCase() == ">help" || theCLI.textContent.toLowerCase() == ">h"){
                 test();
@@ -141,38 +172,6 @@ document.addEventListener('keydown', function(event) {
         } catch (error) {
             console.log(error + ": Well Shit Something went wrong")
         }
-
-            thePast1.innerHTML = "";
-            var Past2 = document.createTextNode(thePast2.textContent);
-            thePast1.appendChild(Past2);
-
-            thePast2.innerHTML = "";
-            Past2 = document.createTextNode(thePast3.textContent);
-            thePast2.appendChild(Past2);
-
-            thePast3.innerHTML = "";
-            Past2 = document.createTextNode(thePast4.textContent);
-            thePast3.appendChild(Past2);
-
-            thePast4.innerHTML = "";
-            Past2 = document.createTextNode(thePast5.textContent);
-            thePast4.appendChild(Past2);
-
-            thePast5.innerHTML = "";
-            Past2 = document.createTextNode(thePast6.textContent);
-            thePast5.appendChild(Past2);
-
-            thePast6.innerHTML = "";
-            Past2 = document.createTextNode(thePast7.textContent);
-            thePast6.appendChild(Past2);
-
-            thePast7.innerHTML = "";
-            Past2 = document.createTextNode(thePast8.textContent);
-            thePast7.appendChild(Past2);
-
-            thePast8.innerHTML = "";
-            thePast8.appendChild(content2);
-
         theCLI.innerHTML = ">";
     }
 
