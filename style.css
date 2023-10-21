@@ -208,8 +208,8 @@
                     font-size: 40px;
                     position: absolute;
                     font-weight: bold;
-                    top: 130px;
-                    left: 15px;
+                    top: 135px;
+                    left: 20px;
                 }
                 #screen{
                     opacity: 30%;
@@ -218,8 +218,8 @@
                 #blink{
                     font-size: 40px;
                     position:absolute;
-                    top: 130px;
-                    left: 27px;
+                    top: 135px;
+                    left: 40px;
                     font-weight: bold;
                     animation: blinker .7s ease infinite;
                 } 
