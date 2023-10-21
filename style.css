@@ -227,7 +227,7 @@
                 {
                     position: absolute;
                     top:9px;
-                    left:15px;
+                    left:25px;
                     font-size: 12px;
                 }
                 #emptySpace{
@@ -259,7 +259,7 @@
                     height:500px;
                 }
                 #computer{
-                    left:65px;
+                    left:55px;
                     width:570px;
                     height: 300px;
                     transform: translatey(16%);
