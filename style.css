@@ -205,10 +205,10 @@
             @media screen and (hover:none){
                 #CLI 
                 {
-                    font-size: 40px;
+                    font-size: 30px;
                     position: absolute;
                     font-weight: bold;
-                    top: 140px;
+                    top: 145px;
                     left: 20px;
                 }
                 #screen{
@@ -216,9 +216,9 @@
                     width: 200%;
                 }
                 #blink{
-                    font-size: 40px;
+                    font-size: 30px;
                     position:absolute;
-                    top: 140px;
+                    top: 145px;
                     left: 40px;
                     font-weight: bold;
                     animation: blinker .7s ease infinite;
