@@ -208,7 +208,7 @@
                     font-size: 40px;
                     position: absolute;
                     font-weight: bold;
-                    top: 120px;
+                    top: 130px;
                     left: 5px;
                 }
                 #screen{
@@ -218,7 +218,7 @@
                 #blink{
                     font-size: 40px;
                     position:absolute;
-                    top: 120px;
+                    top: 130px;
                     left: 27px;
                     font-weight: bold;
                     animation: blinker .7s ease infinite;
@@ -228,7 +228,7 @@
                     position: absolute;
                     top:9px;
                     left:5px;
-                    font-size: 10px;
+                    font-size: 12px;
                 }
                 #emptySpace{
                     width: 200px;
