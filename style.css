@@ -42,19 +42,52 @@
                 #Border{
                     position:absolute;
                     z-index:3;
-                    left:440px;
-                    top:-25px;
+                    left:-50px;
+                    top:-255px;
                     width:1100px;
                     height:1000px;
                 }
                 #Border2{
                     position:absolute;
                     z-index:3;
-                    left:440px;
-                    top:-25px;
+                    left:-50px;
+                    top:-255px;
                     width:1100px;
                     height:1000px;
+                } 
+                #computer{
+                    left:125px;
+                    width:570px;
+                    height: 500px;
+                    transform: translatey(8%);
+                    overflow: hidden;
+                    position:relative;
                 }
+               
+                /* #Border{
+                    position:absolute;
+                    z-index:3;
+                    left:-50px;
+                    top:-130px;
+                    width:600px;
+                    height:500px;
+                }
+                #Border2{
+                    position:absolute;
+                    z-index:3;
+                    left:-50px;
+                    top:-130px;
+                    width:600px;
+                    height:500px;
+                }
+                #computer{
+                    left:25px;
+                    width:570px;
+                    height: 300px;
+                    transform: translatey(0%);
+                    overflow: hidden;
+                    position:relative;
+                } */
             }
             @media screen and (width>1000px){
                 #Border{
@@ -209,5 +242,29 @@
                     overflow-y: hidden; 
                     overflow-x: hidden;
                 }
+                #Border{
+                    position:absolute;
+                    z-index:3;
+                    left:-50px;
+                    top:-130px;
+                    width:600px;
+                    height:500px;
+                }
+                #Border2{
+                    position:absolute;
+                    z-index:3;
+                    left:-50px;
+                    top:-130px;
+                    width:600px;
+                    height:500px;
+                }
+                #computer{
+                    left:25px;
+                    width:570px;
+                    height: 300px;
+                    transform: translatey(0%);
+                    overflow: hidden;
+                    position:relative;
+                }
             }
-            
+        
