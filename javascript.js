@@ -119,6 +119,10 @@ document.addEventListener('keydown', function(event) {
             thePast8.appendChild(content2);
 
             console.log(theCLI.textContent);
+            //preview
+            if (theCLI.textContent.toLowerCase().split(" ")[0] == ">preview"){
+                preview(theCLI.textContent.toLowerCase().split(" ")[1]);
+            }
             if (theCLI.textContent.toLowerCase() == ">help" || theCLI.textContent.toLowerCase() == ">h"){
                 test();
             }
@@ -490,6 +494,58 @@ document.addEventListener('keydown', function(event) {
         }
         // info on info
     }
+    function preview(input)
+    {
+        console.log(input + ":Input on preview function");
+        ///////////////////////////////////////////////////////////////
+        if (input == "c" || input == "certs")
+        {
+            thePast1.innerHTML = "";
+
+            thePast2.innerHTML = "";
+
+            thePast3.innerHTML = "";
+
+            thePast4.innerHTML = "";
+            
+            thePast5.innerHTML = "";
+        
+            thePast6.innerHTML = "";
+            
+            
+            thePast7.innerHTML = "";
+
+            thePast8.innerHTML = ""; 
+            var element = document.body;
+            element.classList.toggle("visC");
+        }
+        else if (input == "r" || input == "resume")
+        {
+            thePast1.innerHTML = "";
+
+            thePast2.innerHTML = "";
+
+            thePast3.innerHTML = "";
+
+            thePast4.innerHTML = "";
+            
+            thePast5.innerHTML = "";
+        
+            thePast6.innerHTML = "";
+            
+            
+            thePast7.innerHTML = "";
+
+            thePast8.innerHTML = ""; 
+            var element = document.getElementById("resume");
+            element.classList.toggle("vis");
+        }
+        else {
+            console.log(input)
+            NotAvailable();
+        }
+        // info on info
+    }
     function NotAvailable(){
         thePast1.innerHTML = ".";
 
@@ -509,3 +565,26 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+window.onwheel = e => {
+    var elemental = document.getElementById("resume");
+    var Mstyle = window.getComputedStyle(elemental);
+    var height = Mstyle.getPropertyValue('top');
+
+    console.log(height);
+    if(e.deltaY >= 0){
+      // Wheel Down
+      console.log('Down');
+
+      if (elemental.classList.contains("vis") && parseInt(height)<100)
+      {
+        elemental.style.top = (parseInt(height)+10)+"px";
+      }
+    } else {
+      // Wheel Up
+      console.log('Up');
+      if (elemental.classList.contains("vis") && parseInt(height)>-1000)
+      {
+        elemental.style.top = (parseInt(height)-10)+"px";
+      }
+    }
+  }
