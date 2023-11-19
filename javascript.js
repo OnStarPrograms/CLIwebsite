@@ -579,32 +579,38 @@ window.onwheel = e => {
       // Wheel Down
       console.log('Down');
 
-      if (elemental.classList.contains("vis") && parseInt(height)<100)
+      if (elemental.classList.contains("vis") && parseInt(height)>-1000)
       {
         elemental.style.top = (parseInt(height)-20)+"px";
       }
     } else {
       // Wheel Up
       console.log('Up');
-      if (elemental.classList.contains("vis") && parseInt(height)>-1000)
+      if (elemental.classList.contains("vis") && parseInt(height)<100)
       {
         elemental.style.top = (parseInt(height)+20)+"px";
       }
     }
   }
-  document.addEventListener('swipeup',function(e){
+  document.addEventListener('swipedown',function(e){
+    var elemental = document.getElementById("resume");
+    var Mstyle = window.getComputedStyle(elemental);
+    var height = Mstyle.getPropertyValue('top');
     console.log('Down');
 
-      if (elemental.classList.contains("vis") && parseInt(height)<100)
+      if (elemental.classList.contains("vis") && parseInt(height)<10)
       {
-        elemental.style.top = (parseInt(height)+20)+"px";
+        elemental.style.top = (parseInt(height)+70)+"px";
       }
   });
-  document.addEventListener('swipedown',function(e){
+  document.addEventListener('swipeup',function(e){
+    var elemental = document.getElementById("resume");
+    var Mstyle = window.getComputedStyle(elemental);
+    var height = Mstyle.getPropertyValue('top');
     console.log('Down');
 
-      if (elemental.classList.contains("vis") && parseInt(height)>-100)
+      if (elemental.classList.contains("vis") && parseInt(height)>-350)
       {
-        elemental.style.top = (parseInt(height)-20)+"px";
+        elemental.style.top = (parseInt(height)-70)+"px";
       }
   });
