@@ -577,14 +577,14 @@ window.onwheel = e => {
 
       if (elemental.classList.contains("vis") && parseInt(height)<100)
       {
-        elemental.style.top = (parseInt(height)+20)+"px";
+        elemental.style.top = (parseInt(height)-20)+"px";
       }
     } else {
       // Wheel Up
       console.log('Up');
       if (elemental.classList.contains("vis") && parseInt(height)>-1000)
       {
-        elemental.style.top = (parseInt(height)-20)+"px";
+        elemental.style.top = (parseInt(height)+20)+"px";
       }
     }
   }
