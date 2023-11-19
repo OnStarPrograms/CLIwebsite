@@ -53,6 +53,11 @@ document.addEventListener('keydown', function(event) {
     }
     else if (event.keyCode == 8)
     {
+        var resumee = document.getElementById("resume");
+        if (resumee.classList.contains("vis"))
+        {
+            resumee.classList.toggle("vis");
+        }
         var MCon = theCLI.textContent;
         if (MCon != ">"){
             MCon = MCon.substring(0, MCon.length - 1);
@@ -564,7 +569,6 @@ document.addEventListener('keydown', function(event) {
         thePast8.innerHTML = "‏‏‎";
     }
 });
-
 window.onwheel = e => {
     var elemental = document.getElementById("resume");
     var Mstyle = window.getComputedStyle(elemental);
