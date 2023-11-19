@@ -588,3 +588,19 @@ window.onwheel = e => {
       }
     }
   }
+  document.addEventListener('swipeup',function(e){
+    console.log('Down');
+
+      if (elemental.classList.contains("vis") && parseInt(height)<100)
+      {
+        elemental.style.top = (parseInt(height)+20)+"px";
+      }
+  });
+  document.addEventListener('swipedown',function(e){
+    console.log('Down');
+
+      if (elemental.classList.contains("vis") && parseInt(height)>-100)
+      {
+        elemental.style.top = (parseInt(height)-20)+"px";
+      }
+  });
