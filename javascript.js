@@ -180,16 +180,16 @@ document.addEventListener('keydown', function(event) {
                 info(theCLI.textContent.toLowerCase().split(" ")[1]);
             }
             if (theCLI.textContent.toLowerCase() == ">jar2exe" || theCLI.textContent.toLowerCase() == ">je"){
-                NotAvailable();
+                // Cancel the default action, if needed
+                // Trigger the button element with a click
+                document.getElementById("Jarbuy_button").click();
+
             }
-            if (theCLI.textContent.toLowerCase() == ">decryption" || theCLI.textContent.toLowerCase() == ">de"){
-                NotAvailable();
-            }
-            if (theCLI.textContent.toLowerCase() == ">auto" || theCLI.textContent.toLowerCase() == ">ma"){
-                NotAvailable();
+            if (theCLI.textContent.toLowerCase() == ">auto" || theCLI.textContent.toLowerCase() == ">as"){
+                document.getElementById("Autobuy_button").click();
             }
             if (theCLI.textContent.toLowerCase() == ">alarm" || theCLI.textContent.toLowerCase() == ">sa"){
-                NotAvailable();
+                document.getElementById("Alarmbuy_button").click();
             }
         } catch (error) {
             console.log(error + ": Well Shit Something went wrong")
@@ -246,19 +246,15 @@ document.addEventListener('keydown', function(event) {
                 thePast2.appendChild(Past2);
             
                 thePast3.innerHTML = "";
-                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎J̶a̶r̶ ̶t̶o̶ ̶E̶x̶e̶:̶ ̶'̶j̶e̶'̶ ̶o̶r̶ ̶'̶j̶a̶r̶2̶e̶x̶e̶'");//Jar to Exe: 'je' or 'jar2exe'
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Jar to Exe: 'je' or 'jar2exe'");//Jar to Exe: 'je' or 'jar2exe'
                 thePast3.appendChild(Past2);
         
                 thePast4.innerHTML = "";
-                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎D̶e̶c̶r̶y̶p̶t̶i̶o̶n̶:̶ ̶'̶d̶e̶'̶ ̶o̶r̶ ̶'̶d̶e̶c̶r̶y̶p̶t̶i̶o̶n̶'̶");//Decryption: 'de' or 'decryption'
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Auto Startup App: 'as' or 'auto'");//Decryption: 'de' or 'decryption'
                 thePast4.appendChild(Past2);
             
-                thePast5.innerHTML = "";
-                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎M̶a̶i̶l̶ ̶A̶u̶t̶o̶m̶a̶t̶i̶o̶n̶ ̶T̶o̶o̶l̶:̶ ̶'̶m̶a̶'̶ ̶o̶r̶ ̶'̶a̶u̶t̶o̶'̶");//Mail Automation Tool: 'ma' or 'auto'
-                thePast5.appendChild(Past2);
-            
                 thePast6.innerHTML = "";
-                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎S̶i̶l̶e̶n̶t̶ ̶A̶l̶a̶r̶m̶ ̶C̶l̶o̶c̶k̶:̶ ̶'̶s̶a̶'̶ ̶o̶r̶ ̶'̶a̶l̶a̶r̶m̶'̶");//Silent Alarm Clock: 'sa' or 'alarm'
+                Past2 = document.createTextNode("‏‏‎ ‎‏‏‎ ‎Silent Alarm Clock: 'sa' or 'alarm'");//Silent Alarm Clock: 'sa' or 'alarm'
                 thePast6.appendChild(Past2);
             
                 thePast8.innerHTML = "Page 2 ('<' and '>' to change pages)";
@@ -352,7 +348,7 @@ document.addEventListener('keydown', function(event) {
         console.log(input + ":Input on info function");
         if (input == "help" || input == "h"){
 
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            thePast1.innerHTML = "";
 
             thePast2.innerHTML = "Info: [Help]";
 
@@ -373,7 +369,7 @@ document.addEventListener('keydown', function(event) {
         ////////////////////////////////////////////////////////////////
         else if (input == "mode" || input == "m")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            thePast1.innerHTML = "";
 
             thePast2.innerHTML = "Info: [Mode]";
 
@@ -393,7 +389,7 @@ document.addEventListener('keydown', function(event) {
         ////////////////////////////////////////////////////////////////
         else if (input == "js")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            thePast1.innerHTML = "";
 
             thePast2.innerHTML = "Info: [JavaScript]";
 
@@ -413,7 +409,7 @@ document.addEventListener('keydown', function(event) {
         ///////////////////////////////////////////////////////////////
         else if (input == "w" || input == "web")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            thePast1.innerHTML = "";
 
             thePast2.innerHTML = "Info: [Sister Site]";
 
@@ -432,7 +428,7 @@ document.addEventListener('keydown', function(event) {
         }
         else if (input == "c" || input == "certs")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            thePast1.innerHTML = "";
 
             thePast2.innerHTML = "Info: [Certifications]";
 
@@ -451,7 +447,7 @@ document.addEventListener('keydown', function(event) {
         }
         else if (input == "r" || input == "resume")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            thePast1.innerHTML = "";
 
             thePast2.innerHTML = "Info: [Resume]";
 
@@ -470,7 +466,7 @@ document.addEventListener('keydown', function(event) {
         }
         else if (input == "connect" || input == "s")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            thePast1.innerHTML = "";
 
             thePast2.innerHTML = "Info: [connect]";
 
@@ -489,7 +485,7 @@ document.addEventListener('keydown', function(event) {
         }
         else if (input == "" || input == "input" || input == undefined)
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            thePast1.innerHTML = "";
 
             thePast2.innerHTML = "Info: [info]";
 
@@ -505,6 +501,25 @@ document.addEventListener('keydown', function(event) {
             thePast7.innerHTML = "‏‏‎ -These commands in question are";
 
             thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎available in the [help] menu"; 
+        }
+        else if (input == "sa" || input == "alarm" || input == "as" || input == "auto" || input == "je" || input == "java2exe")
+        {
+            thePast1.innerHTML = "";
+
+            thePast2.innerHTML = "Info: [projects]";
+
+            thePast3.innerHTML = "‏‏‎ -The [projects] are downloadable programs";
+
+            thePast4.innerHTML = "‏‏‎ ‎‏‏‎ ‎that the developer built";
+            
+            thePast5.innerHTML = "‏‏‎ ‎‏‏‎ ‎to help with other people";
+        
+            thePast6.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
+            
+            
+            thePast7.innerHTML = "‏‏‎ -These projects are";
+
+            thePast8.innerHTML = "‏‏‎ ‎‏‏‎ ‎completely free"; 
         }
         else {
             console.log(input)
@@ -594,20 +609,19 @@ window.onwheel = e => {
     var height = Mstyle.getPropertyValue('top');
     if (elemental.classList.contains("vis"))
     {
-        console.log(0);
         console.log(height);
         if(e.deltaY >= 0){
         // Wheel Down
         console.log('Down');
 
-        if (elemental.classList.contains("vis") && parseInt(height)>-1000)
+        if (elemental.classList.contains("vis") && parseInt(height)>-900)
         {
             elemental.style.top = (parseInt(height)-20)+"px";
         }
         } else {
         // Wheel Up
         console.log('Up');
-        if (elemental.classList.contains("vis") && parseInt(height)<100)
+        if (elemental.classList.contains("vis") && parseInt(height)<50)
         {
             elemental.style.top = (parseInt(height)+20)+"px";
         }
@@ -629,7 +643,7 @@ window.onwheel = e => {
             } else {
             // Wheel Up
             console.log('Up');
-            if (elemental.classList.contains("visC") && parseInt(height)<100)
+            if (elemental.classList.contains("visC") && parseInt(height)<50)
             {
                 elemental.style.top = (parseInt(height)+20)+"px";
             }

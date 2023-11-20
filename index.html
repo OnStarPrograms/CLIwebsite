@@ -20,6 +20,8 @@
         <link rel="shortcut icon" href="Photos/IMG_0069.jpg" type=image/x-icon>
         <script src="javascript.js"></script>
         <script src="Tocca.js"></script>
+        <script type="text/javascript" src="https://static.itch.io/api.js"></script>
+        
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -46,7 +48,32 @@
             <div id = "CLI">></div>
             <div id = "blink">_</div>
         </div>
+        <button id="Jarbuy_button" style="display:none;">Jar2EXE</button>
+        <button id="Alarmbuy_button" style="display:none;">AlarmClock</button>
+        <button id="Autobuy_button" style="display:none;">AutoStart</button>
         <div id = "emptySpace">Please Tap the Screen to Access the Keyboard</div>
-<!-- script src="" async defer -->
+
+
+
+    <!--so for some reason I get hit with an error if these guys are out of index.html.... oh well-->
+    <script type="text/javascript">
+        Itch.attachBuyButton(document.getElementById("Jarbuy_button"), {
+        // replace the following with the correct information about your game
+        user: "onstarprograms",
+        game: "jartoexe-builder"
+        });
+        Itch.attachBuyButton(document.getElementById("Alarmbuy_button"), {
+            // replace the following with the correct information about your game
+            user: "onstarprograms",
+            game: "AlarmClock1.0"
+        });
+        Itch.attachBuyButton(document.getElementById("Autobuy_button"), {
+            // replace the following with the correct information about your game
+            user: "onstarprograms",
+            game: "auto-startup-application"
+        });
+        
+    //AlarmClock1.0
+    </script>
     </body>
 </html>
