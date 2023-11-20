@@ -352,7 +352,7 @@ document.addEventListener('keydown', function(event) {
         console.log(input + ":Input on info function");
         if (input == "help" || input == "h"){
 
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
 
             thePast2.innerHTML = "Info: [Help]";
 
@@ -373,7 +373,7 @@ document.addEventListener('keydown', function(event) {
         ////////////////////////////////////////////////////////////////
         else if (input == "mode" || input == "m")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
 
             thePast2.innerHTML = "Info: [Mode]";
 
@@ -393,7 +393,7 @@ document.addEventListener('keydown', function(event) {
         ////////////////////////////////////////////////////////////////
         else if (input == "js")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
 
             thePast2.innerHTML = "Info: [JavaScript]";
 
@@ -413,7 +413,7 @@ document.addEventListener('keydown', function(event) {
         ///////////////////////////////////////////////////////////////
         else if (input == "w" || input == "web")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
 
             thePast2.innerHTML = "Info: [Sister Site]";
 
@@ -432,7 +432,7 @@ document.addEventListener('keydown', function(event) {
         }
         else if (input == "c" || input == "certs")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
 
             thePast2.innerHTML = "Info: [Certifications]";
 
@@ -451,7 +451,7 @@ document.addEventListener('keydown', function(event) {
         }
         else if (input == "r" || input == "resume")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
 
             thePast2.innerHTML = "Info: [Resume]";
 
@@ -470,7 +470,7 @@ document.addEventListener('keydown', function(event) {
         }
         else if (input == "connect" || input == "s")
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
 
             thePast2.innerHTML = "Info: [connect]";
 
@@ -489,7 +489,7 @@ document.addEventListener('keydown', function(event) {
         }
         else if (input == "" || input == "input" || input == undefined)
         {
-            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎.";
+            thePast1.innerHTML = "‏‏‎ ‎‏‏‎ ‎";
 
             thePast2.innerHTML = "Info: [info]";
 
