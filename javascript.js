@@ -53,11 +53,6 @@ document.addEventListener('keydown', function(event) {
     }
     else if (event.keyCode == 8)
     {
-        var resumee = document.getElementById("resume");
-        if (resumee.classList.contains("vis"))
-        {
-            resumee.classList.toggle("vis");
-        }
         var MCon = theCLI.textContent;
         if (MCon != ">"){
             MCon = MCon.substring(0, MCon.length - 1);
@@ -124,7 +119,25 @@ document.addEventListener('keydown', function(event) {
             thePast8.appendChild(content2);
 
             console.log(theCLI.textContent);
-            //preview
+            //preview\
+
+
+            var resumee = document.getElementById("resume");
+            console.log(resumee.classList.contains("vis"))
+            if (resumee.classList.contains("vis"))
+            {
+                resumee.classList.toggle("vis");
+            }
+            var Certi = document.getElementById("Certif");
+            console.log(Certi.classList.contains("visC"))
+            if (Certi.classList.contains("visC"))
+            {
+                Certi.classList.toggle("visC");
+            }
+
+
+
+
             if (theCLI.textContent.toLowerCase().split(" ")[0] == ">preview"){
                 preview(theCLI.textContent.toLowerCase().split(" ")[1]);
             }
@@ -521,7 +534,7 @@ document.addEventListener('keydown', function(event) {
             thePast7.innerHTML = "";
 
             thePast8.innerHTML = ""; 
-            var element = document.body;
+            var element = document.getElementById("Certif");
             element.classList.toggle("visC");
         }
         else if (input == "r" || input == "resume")
@@ -569,33 +582,83 @@ document.addEventListener('keydown', function(event) {
         thePast8.innerHTML = "‏‏‎";
     }
 });
+
+
+
+
+
+//externals
 window.onwheel = e => {
     var elemental = document.getElementById("resume");
     var Mstyle = window.getComputedStyle(elemental);
     var height = Mstyle.getPropertyValue('top');
+    if (elemental.classList.contains("vis"))
+    {
+        console.log(0);
+        console.log(height);
+        if(e.deltaY >= 0){
+        // Wheel Down
+        console.log('Down');
 
-    console.log(height);
-    if(e.deltaY >= 0){
-      // Wheel Down
-      console.log('Down');
-
-      if (elemental.classList.contains("vis") && parseInt(height)>-1000)
-      {
-        elemental.style.top = (parseInt(height)-20)+"px";
-      }
-    } else {
-      // Wheel Up
-      console.log('Up');
-      if (elemental.classList.contains("vis") && parseInt(height)<100)
-      {
-        elemental.style.top = (parseInt(height)+20)+"px";
-      }
+        if (elemental.classList.contains("vis") && parseInt(height)>-1000)
+        {
+            elemental.style.top = (parseInt(height)-20)+"px";
+        }
+        } else {
+        // Wheel Up
+        console.log('Up');
+        if (elemental.classList.contains("vis") && parseInt(height)<100)
+        {
+            elemental.style.top = (parseInt(height)+20)+"px";
+        }
+        }
+    }
+    else
+    {
+        elemental = document.getElementById("Certif");
+        Mstyle = window.getComputedStyle(elemental);
+        height = Mstyle.getPropertyValue('top');
+        if(e.deltaY >= 0){
+            // Wheel Down
+            console.log('Down');
+    
+            if (elemental.classList.contains("visC") && parseInt(height)>-500)
+            {
+                elemental.style.top = (parseInt(height)-20)+"px";
+            }
+            } else {
+            // Wheel Up
+            console.log('Up');
+            if (elemental.classList.contains("visC") && parseInt(height)<100)
+            {
+                elemental.style.top = (parseInt(height)+20)+"px";
+            }
+            }
     }
   }
+
+
   document.addEventListener('swipedown',function(e){
     var elemental = document.getElementById("resume");
     var Mstyle = window.getComputedStyle(elemental);
     var height = Mstyle.getPropertyValue('top');
+    if (elemental.classList.contains("vis"))
+    {
+        if (elemental.classList.contains("vis") && parseInt(height)<10)
+        {
+            elemental.style.top = (parseInt(height)+70)+"px";
+        }
+    }
+    else
+    {
+        elemental = document.getElementById("Certif");
+        Mstyle = window.getComputedStyle(elemental);
+        height = Mstyle.getPropertyValue('top');
+        if (elemental.classList.contains("visC") && parseInt(height)<10)
+        {
+            elemental.style.top = (parseInt(height)+70)+"px";
+        }
+    }
     console.log('Down');
 
       if (elemental.classList.contains("vis") && parseInt(height)<10)
@@ -607,10 +670,22 @@ window.onwheel = e => {
     var elemental = document.getElementById("resume");
     var Mstyle = window.getComputedStyle(elemental);
     var height = Mstyle.getPropertyValue('top');
+    if (elemental.classList.contains("vis"))
+    {
+        if (elemental.classList.contains("vis") && parseInt(height)>-350)
+        {
+          elemental.style.top = (parseInt(height)-70)+"px";
+        }
+    }
+    else
+    {
+        elemental = document.getElementById("Certif");
+        Mstyle = window.getComputedStyle(elemental);
+        height = Mstyle.getPropertyValue('top');
+        if (elemental.classList.contains("visC") && parseInt(height)>-350)
+        {
+            elemental.style.top = (parseInt(height)-70)+"px";
+        }
+    }
     console.log('Down');
-
-      if (elemental.classList.contains("vis") && parseInt(height)>-350)
-      {
-        elemental.style.top = (parseInt(height)-70)+"px";
-      }
   });
